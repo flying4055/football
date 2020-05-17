@@ -1,0 +1,205 @@
+:root {
+    --icon: url("../images/all-icon.png") 0 0 no-repeat;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    background: url("../images/bj.jpg") top no-repeat fixed #000;
+    color: #fff;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+a {
+    color: #fff;
+    text-indent: 0;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+em {
+    font-style: normal;
+}
+
+img {
+    border: none;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.icon-all {
+    background: var(--icon);
+}
+
+.sever-icon_ps4 {
+    background: var(--icon);
+    background-position: -592px -558px;
+    height: 33px;
+    width: 39px;
+    margin-bottom: 5px;
+}
+
+.sever-icon_xbox {
+    background: var(--icon);
+    background-position: -699px -558px;
+    height: 33px;
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+.sever-icon_switch {
+    background: var(--icon);
+    background-position: -647px -558px;
+    height: 33px;
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+.sever-icon_mobile {
+    background: var(--icon);
+    background-position: -48px -551px;
+    height: 33px;
+    width: 20px;
+    margin-bottom: 5px;
+}
+
+.sever-icon_pc {
+    background: var(--icon);
+    background-position: -98px -550px;
+    height: 33px;
+    width: 33px;
+    margin-bottom: 5px;
+}
+
+.reputation-icon {
+    background: var(--icon);
+    background-position: -274px -204px;
+    width: 40px;
+    height: 48px;
+}
+
+.payment-icon {
+    background: var(--icon);
+    background-position: -458px -203px;
+    width: 49px;
+    height: 48px;
+}
+
+.price-icon {
+    background: var(--icon);
+    background-position: -332px -202px;
+    width: 38px;
+    height: 48px;
+}
+
+.fast-icon {
+    background: var(--icon);
+    background-position: -389px -200px;
+    width: 50px;
+    height: 48px;
+}
+
+.ps4-icon {
+    background: url("../images/coin-PS4-logo.png") 0 0 no-repeat;
+}
+
+.delete-icon {
+    display: inline-block;
+    width: 23px;
+    height: 20px;
+    border: 0;
+    background: url('../images/gold-delete.png') no-repeat;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.yellow-btn-icon {
+    background: var(--icon);
+    width: 80px;
+    height: 20px !important;
+    background-position: -419px -415px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.blue-btn-icon {
+    background: var(--icon);
+    width: 80px;
+    height: 20px !important;
+    background-position: -419px -377px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.nav-target {
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-target-item {
+    min-width: 50px;
+    padding-left: 10px;
+    padding-right: 20px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.nav-target-item:not(:last-child)::before {
+    content: " ";
+    position: absolute;
+    top: 15%;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.icon01, .icon02, .icon03, .icon04, .icon05 {
+    display: inline-flex;
+    width: 17px;
+    height: 17px;
+    background: var(--icon);
+}
+
+.icon01 {
+    background-position: -310px -50px;
+}
+
+.icon02 {
+    background-position: -347px -50px;
+}
+
+.icon03 {
+    background-position: -384px -50px;
+}
+
+.icon04 {
+    background-position: -421px -50px;
+}
+
+.icon05 {
+    background-position: -311px -88px;
+}
+
+.conven-pay span, .conven-price span, .creicon, .currency select, .default, .depicon, .f-google, .f-facebook, .f-twitter, .f-youtube, .fast-deli span, .french, .game-choice .on, .german, .good-repu span, .holland, .italy, .linfff, .login-but, .news-choice .on, .payment, .qbuynow, .qtitle, .quickorder, .search, .search-info, .sever-all li, .sever-mob, .sever-pc, .sever-ps4, .sever-swi, .sever-xb1, .shoppingcar, .affilia, .spain {
+    background: var(--icon);
+}

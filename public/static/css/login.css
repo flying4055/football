@@ -1,0 +1,67 @@
+.login-box {
+    width: 730px;
+}
+
+.login-header {
+    margin: 15px 0;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 12px;
+    background: #1f497f;
+    line-height: 35px;
+    border-bottom: solid 2px #76a0ec;
+}
+
+.login-body {
+    min-height: 500px;
+    background: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+}
+
+.login-form {
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.form-item {
+    margin: 10px auto;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-item > label > span {
+    color: red;
+    margin-right: 4px;
+}
+
+.form-item label {
+    width: 100px;
+    text-align: right;
+}
+
+.form-item input,
+.form-item select {
+    width: 240px;
+    height: 24px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.form-item:last-child {
+    padding-left: 100px;
+}
+
+.form-item:last-child button,
+.form-item:last-child a {
+    width: 90px;
+    height: 24px;
+    line-height: 24px;
+    border: 0;
+    background-position: -520px -377px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}

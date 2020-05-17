@@ -1,0 +1,215 @@
+.pay {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.pay-btn {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.pay-btn > button {
+    width: 111px;
+    height: 38px;
+    background: #d9aa08;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pay-tips {
+    margin: 20px 10px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: #282727;
+}
+
+.shopping-list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-bottom: 1px solid #848484;
+}
+
+.shopping-list_item:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #6f88b6;
+    border-radius: 5px 5px 0 0;
+}
+
+.shopping-list_item > div:first-child {
+    width: 450px;
+    height: inherit;
+    line-height: 40px;
+}
+
+.shopping-list_item > div {
+    width: 225px;
+    height: inherit;
+    line-height: 40px;
+    height: inherit;
+    line-height: 40px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.shopping-list_item > .shopping-number {
+    color: #ff0000;
+}
+
+.shopping-list_item > div:last-child {
+    flex-grow: 0;
+    width: 90px;
+}
+
+.shopping-list_payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #676767;
+    color: #fbf6f6;
+    text-align: right;
+    font: 700 18px arial;
+    border-bottom: 1px solid #848484;
+}
+
+.shopping-list_payment > button:first-child {
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    background: #6f88b6;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.shopping-list_payment > span > em {
+    font-style: normal;
+    color: #f53714;
+}
+
+.shopping-list-total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background: #676767;
+    color: #fbf6f6;
+    text-align: right;
+    font: 700 18px arial;
+    border-bottom: 1px solid #848484;
+}
+
+.shopping-list-total em {
+    font-style: normal;
+    color: #f53714;
+}
+
+.user-info {
+    margin-top: 10px;
+    overflow: hidden;
+    margin: 2px 0 0;
+    padding: 15px;
+    border: 1px solid #575555;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+section {
+    margin-top: 10px;
+}
+
+.section-title {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 12px;
+    background: #1f497f;
+    line-height: 35px;
+    border-bottom: solid 2px #76a0ec;
+}
+
+.section-body {
+    padding: 14px;
+    border: 1px solid #575555;
+    border-radius: 4px;
+    background: #282727;
+}
+
+.section-body form {
+    min-height: 140px;
+    background-color: #233e56;
+}
+
+.form-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.form-item label {
+    width: 120px;
+    padding-right: 10px;
+    text-align: right;
+    color: #fff;
+    font: 14px;
+}
+
+.form-item label > em {
+    color: #c11b1b;
+    padding-right: 6px;
+    font-style: normal;
+}
+
+.form-item_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 270px;
+}
+
+.form-item input {
+    width: 100%;
+    height: 24px;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+.form-item select {
+    width: 120px;
+    height: 24px;
+    margin-right: 4px;
+    font-size: 15px;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+.form-item_box button {
+    margin-left: 3px;
+    width: 75px;
+    height: 30px;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #d9aa08;
+    color: #fff;
+    text-align: center;
+    font: 700 14px arial;
+    cursor: pointer;
+    text-transform: capitalize;
+}
