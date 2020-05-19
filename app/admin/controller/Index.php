@@ -10,11 +10,17 @@ namespace app\admin\controller;
 
 
 use app\BaseController;
+use think\facade\View;
 
 class Index extends BaseController
 {
     public function index()
     {
-        return "admin";
+        return View::fetch('../public/system/test.html');
+    }
+
+    public function login()
+    {
+        return view('login');
     }
 }
