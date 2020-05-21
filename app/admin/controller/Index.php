@@ -16,7 +16,7 @@ class Index extends BaseController
 {
     public function index()
     {
-        return View::fetch('../public/system/test.html');
+        return View::fetch('../public/system/dist/index.html');
     }
 
     public function login()
