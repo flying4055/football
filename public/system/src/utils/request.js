@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 const service = axios.create({
-    // process.env.NODE_ENV === 'development' 来判断是否开发环境
-    // easy-mock服务挂了，暂时不使用了
-    // baseURL: 'https://www.easy-mock.com/mock/592501a391470c0ac1fab128',
-    timeout: 5000
+    timeout: 5000,
 });
+
+// 环境的切换
+axios.defaults.baseURL = process.env.NODE_ENV == 'development' ? 'http://yang.fifa.test/api/' : "http://fifa.yangliangblog.top";
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 service.interceptors.request.use(
     config => {

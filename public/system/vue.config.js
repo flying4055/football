@@ -1,16 +1,16 @@
 module.exports = {
-    baseUrl: './',
-    assetsDir: 'static',
-    productionSourceMap: false,
-    // devServer: {
-    //     proxy: {
-    //         '/api':{
-    //             target:'http://jsonplaceholder.typicode.com',
-    //             changeOrigin:true,
-    //             pathRewrite:{
-    //                 '/api':''
-    //             }
-    //         }
-    //     }
-    // }
+    publicPath: process.env.NODE_ENV === 'production' ? '/system/dist/' : '/',
+    assetsDir: '',
+    productionSourceMap: true,
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://yang.fifa.test/api/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '/api': ''
+                }
+            }
+        }
+    }
 }

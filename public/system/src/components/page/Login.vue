@@ -1,61 +1,63 @@
 <template>
     <div class="login-wrap">
         <div class="ms-login">
-            <div class="ms-title">后台管理系统</div>
+            <div class="ms-title">登陆</div>
             <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                 <el-form-item prop="username">
-                    <el-input v-model="param.username" placeholder="username">
+                    <el-input v-model="param.username" placeholder="账户名称">
                         <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input
-                        type="password"
-                        placeholder="password"
-                        v-model="param.password"
-                        @keyup.enter.native="submitForm()"
-                    >
+                    <el-input type="password" placeholder="账号密码" v-model="param.password" @keyup.enter.native="submitForm()">
                         <el-button slot="prepend" icon="el-icon-lx-lock"></el-button>
                     </el-input>
                 </el-form-item>
                 <div class="login-btn">
-                    <el-button type="primary" @click="submitForm()">登录</el-button>
+                    <el-button type="primary" @click.prevent="submitForm()">登录</el-button>
                 </div>
-                <p class="login-tips">Tips : 用户名和密码随便填。</p>
+                <p class="login-tips">Tips : 没有账户请找管理员</p>
             </el-form>
         </div>
     </div>
 </template>
 
 <script>
+import { Login } from '../../api/login';
+
 export default {
     data: function() {
         return {
             param: {
-                username: 'admin',
-                password: '123123',
+                username: '',
+                password: ''
             },
             rules: {
                 username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-                password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-            },
+                password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
+            }
         };
     },
     methods: {
         submitForm() {
+            console.log(this);
             this.$refs.login.validate(valid => {
                 if (valid) {
-                    this.$message.success('登录成功');
-                    localStorage.setItem('ms_username', this.param.username);
-                    this.$router.push('/');
+                    Login(this.param).then(res => {
+                        if (res.code === '0') {
+                            this.$message.success('登录成功');
+                            localStorage.setItem('ms_username', this.param.username);
+                            this.$router.push('/');
+                        }
+                    });
                 } else {
                     this.$message.error('请输入账号和密码');
                     console.log('error submit!!');
                     return false;
                 }
             });
-        },
-    },
+        }
+    }
 };
 </script>
 
@@ -65,15 +67,18 @@ export default {
     width: 100%;
     height: 100%;
     background-image: url(../../assets/img/login-bg.jpg);
-    background-size: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .ms-title {
     width: 100%;
-    line-height: 50px;
+    padding: 12px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 300;
     color: #fff;
-    border-bottom: 1px solid #ddd;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #e2e2e2;
 }
 .ms-login {
     position: absolute;
@@ -94,11 +99,13 @@ export default {
 .login-btn button {
     width: 100%;
     height: 36px;
+    font-size: 14px;
+    letter-spacing: 2px;
     margin-bottom: 10px;
 }
 .login-tips {
     font-size: 12px;
     line-height: 30px;
-    color: #fff;
+    color: red;
 }
 </style>
