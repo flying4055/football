@@ -5,12 +5,12 @@
             <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                 <el-form-item prop="username">
                     <el-input v-model="param.username" placeholder="账户名称">
-                        <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
+                        <!-- <el-button slot="prepend" icon="el-icon-lx-people"></el-button> -->
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input type="password" placeholder="账号密码" v-model="param.password" @keyup.enter.native="submitForm()">
-                        <el-button slot="prepend" icon="el-icon-lx-lock"></el-button>
+                        <!-- <el-button slot="prepend" icon="el-icon-lx-lock"></el-button> -->
                     </el-input>
                 </el-form-item>
                 <div class="login-btn">
@@ -63,14 +63,17 @@ export default {
 
 <style scoped>
 .login-wrap {
-    position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(../../assets/img/login-bg.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #ee9ae5 10%, #5961f9 100%);
+    user-select: none;
 }
+
 .ms-title {
+    display: none;
     width: 100%;
     padding: 12px 0;
     text-align: center;
@@ -81,17 +84,19 @@ export default {
     border-bottom: 1px solid #e2e2e2;
 }
 .ms-login {
-    position: absolute;
-    left: 50%;
-    top: 50%;
     width: 350px;
-    margin: -190px 0 0 -175px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    overflow: hidden;
+    height: 300px;
+    border-radius: 4px;
+    /* background: rgba(255, 255, 255, 0.3); */
+    /* overflow: hidden; */
 }
 .ms-content {
     padding: 30px 30px;
+}
+
+.el-form-item--mini.el-form-item,
+.el-form-item--small.el-form-item {
+    margin-bottom: 35px;
 }
 .login-btn {
     text-align: center;
@@ -104,6 +109,7 @@ export default {
     margin-bottom: 10px;
 }
 .login-tips {
+    display: none;
     font-size: 12px;
     line-height: 30px;
     color: red;

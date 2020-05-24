@@ -14,11 +14,6 @@ use think\App;
 
 class Admin extends BaseController
 {
-    public function __construct(App $app)
-    {
-        parent::__construct($app);
-        header("Access-Control-Allow-Origin: * ");
-    }
 
     public function index()
     {
@@ -28,6 +23,18 @@ class Admin extends BaseController
     public function login()
     {
         $params = $this->request->post();
-        return json(["code" => "0", "msg" => "success", "data" => $params]);
+        $adminModel = new adminModel;
+        $res = $adminModel->where(['name' => $params['username']])->find();
+        if ($res !== null) {
+            $result = $res->toArray();
+            if (md5($params['password']) == $result['password']) {
+                unset($result['password']); // 密码不可以展示
+                return json(['code' => '0', 'msg' => '恭喜您登陆成功', 'data' => $result]);
+            } else {
+                return json(['code' => '4000', "msg" => "密码有误"]);
+            }
+        } else {
+            return json(['code' => '4000', "msg" => "该账户不存在"]);
+        }
     }
 }
