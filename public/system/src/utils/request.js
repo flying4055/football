@@ -5,7 +5,7 @@ const service = axios.create({
 });
 
 // 环境的切换
-axios.defaults.baseURL = process.env.NODE_ENV == 'development' ? 'http://yang.fifa.test/api/' : "http://fifa.yangliangblog.top";
+axios.defaults.baseURL = process.env.NODE_ENV == 'development' ? 'http://yang.fifa.test/api/' : "/api/";
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 service.interceptors.request.use(
