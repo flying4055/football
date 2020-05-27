@@ -20,8 +20,8 @@ class User extends BaseController
         if (isset($params['username']) && !empty($params['username'])) {
             $search = ['username' => ["like", '%' . $params['username'] . '%']];
         }
-        $pageIndex = isset($params['pageIndex']);
-        $pageSize = isset($params['pageSize']);
+        $pageIndex = isset($params['pageIndex']) ? $params['pageIndex'] : 0;
+        $pageSize = isset($params['pageSize']) ? $params['pageSize'] : 10;
         $userModel = new userModel;
         $res = $userModel->where($search)->page($pageIndex, $pageSize)->order("uid desc")->select();
         $result = $res->toArray();
