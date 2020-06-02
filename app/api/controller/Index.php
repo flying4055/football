@@ -9,7 +9,12 @@
 namespace app\api\controller;
 
 
-class Index
-{
+use app\BaseController;
 
+class Index extends BaseController
+{
+    public function index()
+    {
+        return json(["code" => "400", "msg" => "error"]);
+    }
 }

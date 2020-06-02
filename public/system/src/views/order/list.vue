@@ -8,7 +8,7 @@
 
         <div class="container">
             <div class="handle-box">
-                <el-input v-model.trim="query.username" placeholder="用户名" class="handle-input mr10" clearable></el-input>
+                <el-input v-model.trim="query.search" placeholder="请输入订单号" class="handle-input mr10" clearable></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table
@@ -20,18 +20,26 @@
                 @selection-change="handleSelectionChange"
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
-                <el-table-column prop="uid" label="ID" width="55" align="center"></el-table-column>
-                <el-table-column prop="username" label="订单编号"></el-table-column>
-                <el-table-column prop="create_time" label="注册时间"></el-table-column>
+                <el-table-column prop="id" label="ID" width="55" align="center"></el-table-column>
+                <el-table-column prop="order_no" label="订单编号"></el-table-column>
+                <el-table-column prop="product_name" label="商品名称"></el-table-column>
+                <el-table-column prop="product_id" label="商品ID"></el-table-column>
+                <el-table-column prop="username" label="用户"></el-table-column>
+                <el-table-column prop="number" label="数量"></el-table-column>
+                <el-table-column prop="price" label="价格"></el-table-column>
+                <el-table-column prop="status" label="订单状态"></el-table-column>
+                <el-table-column prop="reason" label="备注"></el-table-column>
+                <el-table-column prop="pay_data" label="支付信息"></el-table-column>
+                <el-table-column prop="create_time" label="下单时间"></el-table-column>
                 <el-table-column prop="update_time" label="修改时间"></el-table-column>
-                <!-- <el-table-column label="操作" width="180" align="center">
+                <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
-                        <el-button type="text" icon="el-icon-edit" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                        <!-- <el-button type="text" icon="el-icon-edit" @click="handleEdit(scope.$index, scope.row)">编辑</el-button> -->
                         <el-button type="text" icon="el-icon-warning" class="red" @click="handleDelete(scope.$index, scope.row)"
-                            ></el-button
+                            >锁定</el-button
                         >
                     </template>
-                </el-table-column> -->
+                </el-table-column>
             </el-table>
             <div class="pagination">
                 <el-pagination
@@ -61,13 +69,13 @@
 </template>
 
 <script>
-// import { fetchData } from '../api/user';
+import { fetchData } from '../../api/order';
 export default {
     name: 'basetable',
     data() {
         return {
             query: {
-                username: '',
+                search: '',
                 pageIndex: 1,
                 pageSize: 10
             },
@@ -87,13 +95,13 @@ export default {
     methods: {
         // 获取列表数据
         getData() {
-            // fetchData(this.query).then(res => {
-            //     console.log(res);
-            //     if (res.code === '0') {
-            //         this.tableData = res.data.list;
-            //         this.pageTotal = res.data.count;
-            //     }
-            // });
+            fetchData(this.query).then(res => {
+                console.log(res);
+                if (res.code === '200') {
+                    this.tableData = res.data.list;
+                    this.pageTotal = res.data.count;
+                }
+            });
         },
         // 触发搜索按钮
         handleSearch() {

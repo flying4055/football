@@ -3,23 +3,23 @@
  * Created by PhpStorm.
  * User: Leon4055
  * Date: 2020-06-02
- * Time: 12:48
+ * Time: 18:41
  */
 
 namespace app\api\controller;
 
-use app\api\model\Product as productModel;
+use app\api\model\Order as orderModel;
 use app\BaseController;
-use think\App;
+use think\app;
 
-class Product extends BaseController
+class Order extends BaseController
 {
     protected $model;
 
     public function __construct(App $app)
     {
         parent::__construct($app);
-        $this->model = new productModel();
+        $this->model = new orderModel();
     }
 
     public function index()
@@ -40,7 +40,7 @@ class Product extends BaseController
         $pageSize = $this->request->get("pageSize", 10);
         $map = [];
         if (isset($search) && !empty($search)) {
-            $map[] = ["title", "like", '%' . $search . '%'];
+            $map[] = ["order_no", "like", '%' . $search . '%'];
         }
         $total = $this->model->where($map)->count('id');
         $result = $this->model->where($map)->page($pageIndex, $pageSize)->select()->toArray();
@@ -48,6 +48,4 @@ class Product extends BaseController
         $data['list'] = $result;
         return json(["code" => "200", "msg" => "success", "data" => $data]);
     }
-
-
 }
