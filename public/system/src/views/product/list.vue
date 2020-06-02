@@ -8,7 +8,7 @@
 
         <div class="container">
             <div class="handle-box">
-                <el-input v-model.trim="query.username" placeholder="商品名称" class="handle-input mr10" clearable></el-input>
+                <el-input v-model.trim="query.search" placeholder="商品名称" class="handle-input mr10" clearable></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
                 <span style="float: right;">
                     <el-button type="primary" icon="el-icon-add" @click="handleAdd">添加商品</el-button>
@@ -72,13 +72,13 @@
 </template>
 
 <script>
-import { fetchData } from '@/api/product';
+import { fetchData } from '../../api/product';
 export default {
     name: 'basetable',
     data() {
         return {
             query: {
-                name: '',
+                search: '',
                 pageIndex: 1,
                 pageSize: 10
             },
@@ -100,7 +100,7 @@ export default {
         getData() {
             fetchData(this.query).then(res => {
                 console.log(res);
-                if (res.code === '0') {
+                if (res.code === '200') {
                     this.tableData = res.data.list;
                     this.pageTotal = res.data.count;
                 }

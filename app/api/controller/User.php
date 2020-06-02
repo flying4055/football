@@ -15,17 +15,16 @@ class User extends BaseController
 {
     public function get_list()
     {
-        $params = $this->request->get();
-        $search = [];
-        if (isset($params['username']) && !empty($params['username'])) {
-            $search = ['username' => ["like", '%' . $params['username'] . '%']];
+        $username = $this->request->get('username', '');
+        $pageIndex = $this->request->get('pageIndex', 0);
+        $pageSize = $this->request->get('pageSize', 10);
+        $map = [];
+        if (isset($username) && !empty($username)) {
+            $map[] = ["username", "like", '%' . $username . '%'];
         }
-        $pageIndex = isset($params['pageIndex']) ? $params['pageIndex'] : 0;
-        $pageSize = isset($params['pageSize']) ? $params['pageSize'] : 10;
         $userModel = new userModel;
-        $total = $userModel->where($search)->count();
-        $res = $userModel->where($search)->page($pageIndex, $pageSize)->order("uid desc")->select();
-        $result = $res->toArray();
+        $total = $userModel->where($map)->count();
+        $result = $userModel->where($map)->page($pageIndex, $pageSize)->order("uid desc")->select()->toArray();
         $data['count'] = $total;
         $data['list'] = $result;
         return json(["code" => "0", "msg" => "success", "data" => $data]);
