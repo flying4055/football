@@ -46,6 +46,7 @@ class User extends BaseController
             $result = $res->toArray();
             if (md5($params['password']) == $result['password']) {
                 unset($result['password']); // 密码不可以展示
+                $userModel->where(['uid' => $result['uid']])->data(['login_time' => time()])->save();
                 return json(['code' => '0', 'msg' => '恭喜您登陆成功', 'data' => $result]);
             } else {
                 return json(['code' => '4000', "msg" => "密码有误"]);

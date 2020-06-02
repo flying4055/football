@@ -11,18 +11,28 @@ export default new Router({
         },
         {
             path: '/',
-            component: () => import(/* webpackChunkName: "home" */ '../components/common/Home.vue'),
+            component: () => import('../components/common/Home.vue'),
             meta: { title: '自述文件' },
             children: [
                 {
                     path: '/dashboard',
-                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Dashboard.vue'),
+                    component: () => import('../components/page/Dashboard.vue'),
                     meta: { title: '系统首页' }
                 },
                 {
                     path: '/user-list',
-                    component: () => import(/* webpackChunkName: "login" */ '../views/user-list.vue'),
+                    component: () => import('../views/user/list.vue'),
                     meta: { title: '用户列表', icon: "el-icon-user" }
+                },
+                {
+                    path: '/product-list',
+                    component: () => import('../views/product/list.vue'),
+                    meta: { title: '商品列表', icon: "el-icon-shopping-bag-1" }
+                }, 
+                {
+                    path: '/order-list',
+                    component: () => import('../views/order/list.vue'),
+                    meta: { title: '订单列表', icon: "el-icon-s-order" }
                 },
                 // {
                 //     path: '/icon',

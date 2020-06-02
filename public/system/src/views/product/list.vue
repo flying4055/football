@@ -8,8 +8,11 @@
 
         <div class="container">
             <div class="handle-box">
-                <el-input v-model.trim="query.username" placeholder="用户名" class="handle-input mr10" clearable ></el-input>
+                <el-input v-model.trim="query.username" placeholder="商品名称" class="handle-input mr10" clearable></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
+                <span style="float: right;">
+                    <el-button type="primary" icon="el-icon-add" @click="handleAdd">添加商品</el-button>
+                </span>
             </div>
             <el-table
                 :data="tableData"
@@ -20,21 +23,23 @@
                 @selection-change="handleSelectionChange"
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
-                <el-table-column prop="uid" label="ID" width="55" align="center"></el-table-column>
-                <el-table-column prop="username" label="用户名"></el-table-column>
-                <el-table-column label="头像(查看大图)" align="center">
-                    <template slot-scope="scope">
-                        <el-image class="table-td-thumb" :src="scope.row.thumb" :preview-src-list="[scope.row.thumb]"></el-image>
-                    </template>
-                </el-table-column>
-                <el-table-column prop="address" label="地址"></el-table-column>
-                <el-table-column prop="create_time" label="注册时间"></el-table-column>
+                <el-table-column prop="id" label="ID" width="55" align="center"></el-table-column>
+                <el-table-column prop="title" label="标题"></el-table-column>
+                <el-table-column prop="desc" label="简介"></el-table-column>
+                <el-table-column prop="keyword" label="关键字"></el-table-column>
+                <el-table-column prop="currency" label="币种"></el-table-column>
+                <el-table-column prop="price" label="单价"></el-table-column>
+                <el-table-column prop="amount_bag" label="金币包"></el-table-column>
+                <el-table-column prop="ext_json" label="扩展字段"></el-table-column>
+                <el-table-column prop="category_id" label="分类"></el-table-column>
+                <el-table-column prop="image" label="图片"></el-table-column>
+                <el-table-column prop="create_time" label="添加时间"></el-table-column>
                 <el-table-column prop="update_time" label="修改时间"></el-table-column>
                 <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
                         <el-button type="text" icon="el-icon-edit" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                        <el-button type="text" icon="el-icon-delete" class="red" @click="handleDelete(scope.$index, scope.row)"
-                            >删除</el-button
+                        <el-button type="text" icon="el-icon-warning" class="red" @click="handleDelete(scope.$index, scope.row)"
+                            >下架</el-button
                         >
                     </template>
                 </el-table-column>
@@ -52,7 +57,7 @@
         </div>
 
         <!-- 编辑弹出框 -->
-        <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
+        <!-- <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
                 <el-form-item label="用户名">
                     <el-input v-model="form.username"></el-input>
@@ -62,18 +67,18 @@
                 <el-button @click="editVisible = false">取 消</el-button>
                 <el-button type="primary" @click="saveEdit">确 定</el-button>
             </span>
-        </el-dialog>
+        </el-dialog> -->
     </div>
 </template>
 
 <script>
-import { fetchData } from '../api/user';
+import { fetchData } from '@/api/product';
 export default {
     name: 'basetable',
     data() {
         return {
             query: {
-                username: '',
+                name: '',
                 pageIndex: 1,
                 pageSize: 10
             },
@@ -96,10 +101,14 @@ export default {
             fetchData(this.query).then(res => {
                 console.log(res);
                 if (res.code === '0') {
-                    this.tableData = res.list;
-                    this.pageTotal = res.pageTotal || 50;
+                    this.tableData = res.data.list;
+                    this.pageTotal = res.data.count;
                 }
             });
+        },
+        // 触发添加按钮
+        handleAdd(){
+            console.log("点击添加");
         },
         // 触发搜索按钮
         handleSearch() {

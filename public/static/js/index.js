@@ -11,10 +11,9 @@ function _link(event) {
 
 // 登录后
 $(document).ready(function () {
-    let user = localStorage.getItem("user") !== "undefined" ? JSON.parse(localStorage.getItem("user")) : "";
-    if (user !== "") {
+    let user = localStorage.getItem("user") !== "undefined" ? JSON.parse(localStorage.getItem("user")) : null;
+    if (user !== 'null' && user !== null) {
         $(".nav-right_login span").html(user.username).css('text-transform', 'capitalize');
-        $(".nav-right_login").attr("href", "javasrcipt:viod(0);");
+        $(".nav-right_login").attr("href", "javascript:;");
     }
-
 });

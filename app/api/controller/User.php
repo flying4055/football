@@ -23,8 +23,11 @@ class User extends BaseController
         $pageIndex = isset($params['pageIndex']) ? $params['pageIndex'] : 0;
         $pageSize = isset($params['pageSize']) ? $params['pageSize'] : 10;
         $userModel = new userModel;
+        $total = $userModel->where($search)->count();
         $res = $userModel->where($search)->page($pageIndex, $pageSize)->order("uid desc")->select();
         $result = $res->toArray();
-        return json(["code" => "0", "msg" => "success", "list" => $result]);
+        $data['count'] = $total;
+        $data['list'] = $result;
+        return json(["code" => "0", "msg" => "success", "data" => $data]);
     }
 }
