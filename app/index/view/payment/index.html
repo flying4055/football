@@ -1,0 +1,347 @@
+{include file="common:head" /}
+<link rel="stylesheet" href="/static/css/payment.css">
+<!-- 中间主体部分 -->
+<div class="content">
+    <div class="content-box">
+        <div class="content-center">
+            <!-- 主体左边-->
+            <div class="content-center_left">
+                <!-- 图标 -->
+                <div class="logo">
+                    <a href="/">
+                        <img class="logo-img" src="/static/images/fifa-logo.png" alt="">
+                    </a>
+                    <div class="logo-right">
+                        <a href="/" class="logo-right_item">
+                            <em class="affilia">Affiliate</em>
+                        </a>
+                        <a href="/" class="logo-right_item logo-right_item__shopping">
+                            <i class="shoppingcar"></i>
+                            <span>(0)</span>
+                        </a>
+                        <a class="logo-right_item">
+                            items in Cart
+                        </a>
+                        <div class="logo-right_item logo-right_item__select-box">
+                            <select class="logo-right_item__select icon-all">
+                                <option selected="selected" value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="AUD">AUD</option>
+                                <option value="CAD">CAD</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- 导航菜单 -->
+                <div class="menu">
+                    <a class="menu-home icon-all" href="/">HOME</a>
+                    <div class="menu-list">
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 COINS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA19 Switch Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 PS4 Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 Xbox One Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 PC Coins</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 20 COINS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA MOBILE COINS</a>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA pack</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">NEWS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 tools</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 支付 -->
+                <div class="payment-content">
+                    <div class="coupon-box">
+                        <div class="coupon-select">
+                            <span>Coupon</span>
+                            <span class="coupon-select_chevron"><i class="fa fa-chevron-down"></i></span>
+                        </div>
+                        <ul class="coupon-options" style="display: none;">
+                            <!--没有优惠券时显示-->
+                            <li style="display:none">暂无优惠</li>
+                            <!---->
+                            <li>
+                                <span>优惠1</span>
+                                <input type="radio" name="coupon-radio" value="优惠1"/>
+                            </li>
+                            <li>
+                                <span>优惠1</span>
+                                <input type="radio" name="coupon-radio" value="优惠1"/>
+                            </li>
+                            <li>
+                                <span>优惠1</span>
+                                <input type="radio" name="coupon-radio" value="优惠1"/>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-method_title">Payment Method</div>
+                        <ul class="payment-method_list">
+                            <li>
+                                <span>支付宝</span>
+                                <span>
+                                    <em>2.5%</em>
+                                    <span class="pay-tag">fee</span>
+                                    <input type="radio" name="radio" class="l-radio"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>微信支付</span>
+                                <span>
+                                    <em>2.5%</em>
+                                    <span class="pay-tag">fee</span>
+                                    <input type="radio" name="radio" class="l-radio"/>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="payment-price">Price <span>9.23 <em>USD</em></span></div>
+                        <div class="payment-price">Coupon<span>-0.00 <em>USD</em></span></div>
+                        <div class="payment-price">Transaction Free<span>+0.00 <em>USD</em></span></div>
+                        <div class="payment-price">Payment Fee(0%)<span>+0.00 <em>USD</em></span></div>
+                        <div class="payment-contract">
+                            <input type="checkbox" name="contract" id="contract">
+                            <label for="contract">I have read and accepted Terms & Conditions.</label>
+                        </div>
+                        <div class="payment-btn">
+                            Confirm the Payment
+                        </div>
+                    </div>
+                </div>
+                <!-- 支付 -->
+            </div>
+            <!-- 主体左边-->
+            <!-- 主体右边-->
+            <div class="content-center_right">
+                <!-- 搜索框 -->
+                <div class="search icon-all">
+                    <div class="search-header icon-all">Search Order Information</div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Input Order Number">
+                        <button class="icon-all"></button>
+                    </div>
+                </div>
+                <!-- 订单 -->
+                <div class="quick-order icon-all">
+                    <div class="quick-title icon-all">
+                        Quick Buy
+                    </div>
+                    <div class="quick-sec">
+                        <ol>
+                            <li>
+                                <span>Game</span>
+                                <select>
+                                    <option value="FIFA20">FIFA 20</option>
+                                    <option value="FIFA19">FIFA19</option>
+                                    <option value="FIFA Mobile">FIFA Mobile</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Platform</span>
+                                <select>
+                                    <option value="PC">PC</option>
+                                    <option value="PS4">PS4</option>
+                                    <option value="Switch">Switch</option>
+                                    <option value="Xbox One">Xbox One</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Delivery</span>
+                                <select>
+                                    <option value="1">Player Auction</option>
+                                    <option value="8">Comfort Trade</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Products</span>
+                                <select>
+                                    <option value="10|1.09|4833175|1">10K Coins 1.09 USD</option>
+                                    <option value="20|2.08|4833171|1">20K Coins 2.08 USD</option>
+                                    <option value="30|3.12|4833198|1">30K Coins 3.12 USD</option>
+                                    <option value="50|5.2|4833186|1">50K Coins 5.2 USD</option>
+                                    <option value="60|6.24|4833173|1">60K Coins 6.24 USD</option>
+                                    <option value="70|7.28|4833169|1">70K Coins 7.28 USD</option>
+                                    <option value="80|8.32|4833176|1">80K Coins 8.32 USD</option>
+                                    <option value="90|9.36|4833184|1">90K Coins 9.36 USD</option>
+                                    <option value="100|10.4|4833168|1">100K Coins 10.4 USD</option>
+                                    <option value="200|20.79|4833197|1">200K Coins 20.79 USD</option>
+                                    <option value="300|31.18|4833191|1">300K Coins 31.18 USD</option>
+                                    <option value="400|41.58|4833180|1">400K Coins 41.58 USD</option>
+                                    <option value="500|51.98|4833193|1">500K Coins 51.98 USD</option>
+                                    <option value="600|62.37|4833187|1">600K Coins 62.37 USD</option>
+                                    <option value="700|72.76|4833177|1">700K Coins 72.76 USD</option>
+                                    <option value="800|83.16|4833179|1">800K Coins 83.16 USD</option>
+                                    <option value="900|93.56|4833189|1">900K Coins 93.56 USD</option>
+                                    <option value="1000|103.95|4833188|1">1000K Coins 103.95 USD</option>
+                                    <option value="2000|207.9|4833194|1">2000K Coins 207.9 USD</option>
+                                    <option value="3000|311.85|4833195|1">3000K Coins 311.85 USD</option>
+                                    <option value="4000|415.8|4833170|1">4000K Coins 415.8 USD</option>
+                                    <option value="5000|519.75|4833190|1">5000K Coins 519.75 USD</option>
+                                    <option value="6000|623.7|4833199|1">6000K Coins 623.7 USD</option>
+                                    <option value="7000|727.65|4833183|1">7000K Coins 727.65 USD</option>
+                                    <option value="8000|831.6|4833181|1">8000K Coins 831.6 USD</option>
+                                    <option value="9000|935.55|4833185|1">9000K Coins 935.55 USD</option>
+                                    <option value="10000|1039.5|4833178|1">10000K Coins 1039.5 USD</option>
+                                    <option value="11000|1143.45|4833174|1">11000K Coins 1143.45 USD</option>
+                                    <option value="12000|1247.4|4833196|1">12000K Coins 1247.4 USD</option>
+                                    <option value="13000|1351.35|4833192|1">13000K Coins 1351.35 USD</option>
+                                    <option value="14000|1455.3|4833182|1">14000K Coins 1455.3 USD</option>
+                                    <option value="15000|1559.25|4833172|1">15000K Coins 1559.25 USD</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Price</span>
+                                <div></div>
+                            </li>
+                            <li>
+                                <input type="button" class="buy-now-btn icon-all" value="BUY NOW">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- 联系我们 -->
+                <div class="contact">
+                    <a href="#">
+                        <img src="/static/images/livechat.png" alt="">
+                    </a>
+                    <div class="tel">
+                        <div class="tel-list">
+                            <span class="tel-list_text">USA</span>
+                            + 1-315-889-1198
+                        </div>
+                        <div class="tel-list">
+                            <span class="tel-list_text">UK</span>
+                            + 1-315-889-1198
+                        </div>
+                    </div>
+                </div>
+                <!-- 语言 -->
+                <div class="languages">
+                    <img src="/static/images/other-languaes.png" alt="">
+                </div>
+            </div>
+            <!-- 主体右边-->
+        </div>
+        <!-- 关于 -->
+        <div class="about">
+            <div class="about-list">
+                <div class="about-list_item">
+                    <div class="about-list_item__header">
+                        <span class="reputation-icon"></span>
+                        <em>Good Reputation</em>
+                    </div>
+                    <p class="about-list_item__body">
+                        FIFAAH has more than 9 years experience of offering safe and
+                        cheap FIFA Coins online service,
+                        millions clients base of the credibility of witnesses.
+                    </p>
+                </div>
+                <div class="about-list_item">
+                    <div class="about-list_item__header">
+                        <span class="payment-icon"></span>
+                        <em>Good Reputation</em>
+                    </div>
+                    <p class="about-list_item__body">
+                        We support 20+ global payment methods Moneybookers / Paypal / Paysafecard to buy FIFA 19
+                        Coins and FUT Coins convenient and security.
+                    </p>
+                </div>
+                <div class="about-list_item">
+                    <div class="about-list_item__header">
+                        <span class="price-icon"></span>
+                        <em>Good Reputation</em>
+                    </div>
+                    <p class="about-list_item__body">
+                        We prepare enough cheap FUT 19 Coins for PC/PS4/XBOX/PS3/IOS with instant delivery. Huge
+                        stock of FIFA Coins can always keep the lowest price.
+                    </p>
+                </div>
+                <div class="about-list_item">
+                    <div class="about-list_item__header">
+                        <span class="fast-icon"></span>
+                        <em>Good Reputation</em>
+                    </div>
+                    <p class="about-list_item__body">
+                        Reliable cheap FIFA Coins real stock can ensure 5 minutes delivery. 24/7 Online Live Chat
+                        can help you check order easy.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 关于 -->
+    </div>
+</div>
+<!-- 中间主体部分 -->
+{include file="common:footer" /}
+</body>
+<script>
+    $(".coupon-select_chevron").click(function (event) {
+        $(".coupon-options").toggle();
+    });
+</script>
+</html>

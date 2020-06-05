@@ -1,667 +1,489 @@
-<!DOCTYPE html>
-<html lang="en">
+{include file="common:head" /}
+<link rel="stylesheet" href="/static/css/detail.css">
+<!-- 中间主体部分 -->
+<div class="content">
+    <div class="content-box">
+        <div class="content-center">
+            <!-- 主体左边-->
+            <div class="content-center_left">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品详情</title>
-    <!-- 导入公共主体样式 -->
-    <link rel="stylesheet" href="./static/css/main.css">
-    <!-- 导入当前页面样式 -->
-    <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="stylesheet" href="./static/css/detail.css">
-    <link rel="stylesheet" href="./static/swiper/css/swiper.min.css">
-    <!-- 导入字体图标库 -->
-    <link href="./static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- 导入JQuery -->
-    <script src="./static/js/jquery/jquery-3.2.1.min.js"></script>
-</head>
-
-<body>
-    <!-- 顶部 -->
-    <header>
-        <div class="nav">
-            <div class="nav-left">
-                <div class="nav-left_text">The World Top FIFA Coins Online Store</div>
-                <!-- 分享图标 -->
-                <div class="nav-left_share">
-                    <i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i>
+                <!-- 导航菜单 -->
+                <div class="menu">
+                    <a class="menu-home icon-all" href="./index.html">HOME</a>
+                    <div class="menu-list">
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 COINS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA19 Switch Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 PS4 Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 Xbox One Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 PC Coins</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 20 COINS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA MOBILE COINS</a>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA pack</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">NEWS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 tools</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <!-- 分享图标 -->
-            </div>
-            <!-- 登陆注册忘记密码 -->
-            <div class="nav-right">
-                <a class="nav-right_login" href="../login/login.html" rel="nofollow">
-                    <i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;Login
-                </a>
-                <a class="nav-right_register" href="./register.html" rel="nofollow">Register</a>
-                <a class="nav-right_forgot" href="#" rel="nofollow">Forgot Password ?</a>
-            </div>
-            <!-- 登陆注册忘记密码 -->
-        </div>
-    </header>
-    <!-- 顶部 -->
-    <!-- 中间主体部分 -->
-    <div class="content">
-        <div class="content-box">
-            <div class="content-center">
-                <!-- 主体左边-->
-                <div class="content-center_left">
-                    <!-- 图标 -->
-                    <div class="logo">
-                        <img class="logo-img" src="./static/images/fifa-logo.png" alt="">
-                        <div class="logo-right">
-                            <a class="logo-right_item">
-                                <i class="fa fa-suitcase fa-lg"></i>
-                                Affiliate
-                            </a>
-                            <a class="logo-right_item logo-right_item__shopping">
-                                <i class="fa fa-shopping-cart fa-lg"></i>
-                                <span>(0)</span>
-                            </a>
-                            <a class="logo-right_item">
-                                items in Cart
-                            </a>
-                            <div class="logo-right_item logo-right_item__select-box">
-                                <select class="logo-right_item__select icon-all">
-                                    <option selected="selected" value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="GBP">GBP</option>
-                                    <option value="AUD">AUD</option>
-                                    <option value="CAD">CAD</option>
-                                </select>
-                            </div>
-                        </div>
+                <!-- 导航标签 -->
+                <div class="nav-target">
+                    <span class="nav-target-item">HOME</span>
+                    <span class="nav-target-item">fifa 20 Coins</span>
+                    <span class="nav-target-item">Ps4 Fut20 Coins</span>
+                </div>
+                <!-- 导航标签 -->
+                <div class="buy-box">
+                    <div class="buy-box-name icon-all">
+                        <h3> BUY FIFA20 PS4 COINS</h3>
+                        <a class="ps4-icon" href="#"></a>
                     </div>
-                    <!-- 导航菜单 -->
-                    <div class="menu">
-                        <a class="menu-home icon-all" href="./index.html">HOME</a>
-                        <div class="menu-list">
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 COINS</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA19 Switch Coins</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA19 PS4 Coins</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA19 Xbox One Coins</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA19 PC Coins</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA 20 COINS</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA MOBILE COINS</a>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA pack</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA pack</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA pack</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA pack</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">NEWS</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">NEWS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">NEWS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">NEWS</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 tools</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="buy-box-delivery">
+                        <em tag="1" class="on">
+                            Player Auction
+                            <span>(0-12 Hours Delivery)</span>
+                        </em>
+                        <em tag="8">
+                            Comfort Trade
+                            <span>(0-12 Hours Delivery)</span>
+                        </em>
+                        <em tag="10">
+                            FIFA 20 Players
+                            <span>(0-12 Hours Delivery)</span>
+                        </em>
                     </div>
-                    <!-- 导航标签 -->
-                    <div class="nav-target">
-                        <span class="nav-target-item">HOME</span>
-                        <span class="nav-target-item">fifa 20 Coins</span>
-                        <span class="nav-target-item">Ps4 Fut20 Coins</span>
-                    </div>
-                    <!-- 导航标签 -->
-                    <div class="buy-box">
-                        <div class="buy-box-name icon-all">
-                            <h3> BUY FIFA20 PS4 COINS</h3>
-                            <a class="ps4-icon" href="#"></a>
+                    <div class="buy-box-list">
+                        <div class="list-desc">
+                            strongly recommended the auction duration > 72 hours.
                         </div>
-                        <div class="buy-box-delivery">
-                            <em tag="1" class="on">
-                                Player Auction
-                                <span>(0-12 Hours Delivery)</span>
-                            </em>
-                            <em tag="8">
-                                Comfort Trade
-                                <span>(0-12 Hours Delivery)</span>
-                            </em>
-                            <em tag="10">
-                                FIFA 20 Players
-                                <span>(0-12 Hours Delivery)</span>
-                            </em>
-                        </div>
-                        <div class="buy-box-list">
-                            <div class="list-desc">
-                                strongly recommended the auction duration > 72 hours.
-                            </div>
-                            <form action="#" class="list-form">
-                                <div class="list-form_item">Custom Coins Num:</div>
-                                <div class="list-form_item">
-                                    <input type="number" value="10">
-                                    <span>
+                        <form action="#" class="list-form">
+                            <div class="list-form_item">Custom Coins Num:</div>
+                            <div class="list-form_item">
+                                <input type="number" value="10">
+                                <span>
                                         k
                                         <img src="https://www.fifaah.com/images/write.png" alt="">
                                     </span>
+                            </div>
+                            <div class="list-form_item">0 USD</div>
+                            <div class="list-form_item">
+                                <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                            </div>
+                        </form>
+                        <div class="list-ul">
+                            <div class="list-ul_header">
+                                <span>Amount</span>
+                                <span>Price</span>
+                                <span>&nbsp;</span>
+                            </div>
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt="">
+                                    FIFA20 PS4 Coins 10K
                                 </div>
-                                <div class="list-form_item">0 USD</div>
-                                <div class="list-form_item">
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
                                     <button type="submit" class="yellow-btn-icon">Buy Now</button>
                                 </div>
-                            </form>
-                            <div class="list-ul">
-                                <div class="list-ul_header">
-                                    <span>Amount</span>
-                                    <span>Price</span>
-                                    <span>&nbsp;</span>
-                                </div>
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt="">
-                                        FIFA20 PS4 Coins 10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
-                                <!-- 单个商品 -->
-                                <div class="list-ul_li">
-                                    <div class="list-ul_li__title">
-                                        <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
-                                        10K
-                                    </div>
-                                    <div class="list-ul_li__price">
-                                        1.13 USD
-                                    </div>
-                                    <div class="list-ul_li__btn">
-                                        <button type="submit" class="blue-btn-icon">Add Cart</button>
-                                        <button type="submit" class="yellow-btn-icon">Buy Now</button>
-                                    </div>
-                                </div>
-                                <!-- 单个商品 -->
                             </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
+                            <!-- 单个商品 -->
+                            <div class="list-ul_li">
+                                <div class="list-ul_li__title">
+                                    <img src="https://www.fifaah.com/images/ps4-ico.png" alt=""> FIFA20 PS4 Coins
+                                    10K
+                                </div>
+                                <div class="list-ul_li__price">
+                                    1.13 USD
+                                </div>
+                                <div class="list-ul_li__btn">
+                                    <button type="submit" class="blue-btn-icon">Add Cart</button>
+                                    <button type="submit" class="yellow-btn-icon">Buy Now</button>
+                                </div>
+                            </div>
+                            <!-- 单个商品 -->
                         </div>
                     </div>
                 </div>
-                <!-- 主体左边-->
-                <!-- 主体右边-->
-                <div class="content-center_right">
-                    <!-- 搜索框 -->
-                    <div class="search icon-all">
-                        <div class="search-header icon-all">Search Order Information</div>
-                        <div class="search-box">
-                            <input type="text" placeholder="Input Order Number">
-                            <button class="icon-all"></button>
-                        </div>
-                    </div>
-                    <!-- 订单 -->
-                    <div class="quick-order icon-all">
-                        <div class="quick-title icon-all">
-                            Quick Buy
-                        </div>
-                        <div class="quick-sec">
-                            <ol>
-                                <li>
-                                    <span>Game</span>
-                                    <select>
-                                        <option value="FIFA20">FIFA 20</option>
-                                        <option value="FIFA19">FIFA19</option>
-                                        <option value="FIFA Mobile">FIFA Mobile</option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <span>Platform</span>
-                                    <select>
-                                        <option value="PC">PC</option>
-                                        <option value="PS4">PS4</option>
-                                        <option value="Switch">Switch</option>
-                                        <option value="Xbox One">Xbox One</option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <span>Delivery</span>
-                                    <select>
-                                        <option value="1">Player Auction</option>
-                                        <option value="8">Comfort Trade</option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <span>Products</span>
-                                    <select>
-                                        <option value="10|1.09|4833175|1">10K Coins 1.09 USD</option>
-                                        <option value="20|2.08|4833171|1">20K Coins 2.08 USD</option>
-                                        <option value="30|3.12|4833198|1">30K Coins 3.12 USD</option>
-                                        <option value="50|5.2|4833186|1">50K Coins 5.2 USD</option>
-                                        <option value="60|6.24|4833173|1">60K Coins 6.24 USD</option>
-                                        <option value="70|7.28|4833169|1">70K Coins 7.28 USD</option>
-                                        <option value="80|8.32|4833176|1">80K Coins 8.32 USD</option>
-                                        <option value="90|9.36|4833184|1">90K Coins 9.36 USD</option>
-                                        <option value="100|10.4|4833168|1">100K Coins 10.4 USD</option>
-                                        <option value="200|20.79|4833197|1">200K Coins 20.79 USD</option>
-                                        <option value="300|31.18|4833191|1">300K Coins 31.18 USD</option>
-                                        <option value="400|41.58|4833180|1">400K Coins 41.58 USD</option>
-                                        <option value="500|51.98|4833193|1">500K Coins 51.98 USD</option>
-                                        <option value="600|62.37|4833187|1">600K Coins 62.37 USD</option>
-                                        <option value="700|72.76|4833177|1">700K Coins 72.76 USD</option>
-                                        <option value="800|83.16|4833179|1">800K Coins 83.16 USD</option>
-                                        <option value="900|93.56|4833189|1">900K Coins 93.56 USD</option>
-                                        <option value="1000|103.95|4833188|1">1000K Coins 103.95 USD</option>
-                                        <option value="2000|207.9|4833194|1">2000K Coins 207.9 USD</option>
-                                        <option value="3000|311.85|4833195|1">3000K Coins 311.85 USD</option>
-                                        <option value="4000|415.8|4833170|1">4000K Coins 415.8 USD</option>
-                                        <option value="5000|519.75|4833190|1">5000K Coins 519.75 USD</option>
-                                        <option value="6000|623.7|4833199|1">6000K Coins 623.7 USD</option>
-                                        <option value="7000|727.65|4833183|1">7000K Coins 727.65 USD</option>
-                                        <option value="8000|831.6|4833181|1">8000K Coins 831.6 USD</option>
-                                        <option value="9000|935.55|4833185|1">9000K Coins 935.55 USD</option>
-                                        <option value="10000|1039.5|4833178|1">10000K Coins 1039.5 USD</option>
-                                        <option value="11000|1143.45|4833174|1">11000K Coins 1143.45 USD</option>
-                                        <option value="12000|1247.4|4833196|1">12000K Coins 1247.4 USD</option>
-                                        <option value="13000|1351.35|4833192|1">13000K Coins 1351.35 USD</option>
-                                        <option value="14000|1455.3|4833182|1">14000K Coins 1455.3 USD</option>
-                                        <option value="15000|1559.25|4833172|1">15000K Coins 1559.25 USD</option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <span>Price</span>
-                                    <div></div>
-                                </li>
-                                <li>
-                                    <input type="button" class="buy-now-btn icon-all" value="BUY NOW">
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <!-- 联系我们 -->
-                    <div class="contact">
-                        <a href="#">
-                            <img src="./static/images/livechat.png" alt="">
-                        </a>
-                        <div class="tel">
-                            <div class="tel-list">
-                                <span class="tel-list_text">USA</span>
-                                + 1-315-889-1198
-                            </div>
-                            <div class="tel-list">
-                                <span class="tel-list_text">UK</span>
-                                + 1-315-889-1198
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 语言 -->
-                    <div class="languages">
-                        <img src="./static/images/other-languaes.png" alt="">
-                    </div>
-                </div>
-                <!-- 主体右边-->
             </div>
+            <!-- 主体左边-->
+            <!-- 主体右边-->
+            <div class="content-center_right">
+                <!-- 搜索框 -->
+                <div class="search icon-all">
+                    <div class="search-header icon-all">Search Order Information</div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Input Order Number">
+                        <button class="icon-all"></button>
+                    </div>
+                </div>
+                <!-- 订单 -->
+                <div class="quick-order icon-all">
+                    <div class="quick-title icon-all">
+                        Quick Buy
+                    </div>
+                    <div class="quick-sec">
+                        <ol>
+                            <li>
+                                <span>Game</span>
+                                <select>
+                                    <option value="FIFA20">FIFA 20</option>
+                                    <option value="FIFA19">FIFA19</option>
+                                    <option value="FIFA Mobile">FIFA Mobile</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Platform</span>
+                                <select>
+                                    <option value="PC">PC</option>
+                                    <option value="PS4">PS4</option>
+                                    <option value="Switch">Switch</option>
+                                    <option value="Xbox One">Xbox One</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Delivery</span>
+                                <select>
+                                    <option value="1">Player Auction</option>
+                                    <option value="8">Comfort Trade</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Products</span>
+                                <select>
+                                    <option value="10|1.09|4833175|1">10K Coins 1.09 USD</option>
+                                    <option value="20|2.08|4833171|1">20K Coins 2.08 USD</option>
+                                    <option value="30|3.12|4833198|1">30K Coins 3.12 USD</option>
+                                    <option value="50|5.2|4833186|1">50K Coins 5.2 USD</option>
+                                    <option value="60|6.24|4833173|1">60K Coins 6.24 USD</option>
+                                    <option value="70|7.28|4833169|1">70K Coins 7.28 USD</option>
+                                    <option value="80|8.32|4833176|1">80K Coins 8.32 USD</option>
+                                    <option value="90|9.36|4833184|1">90K Coins 9.36 USD</option>
+                                    <option value="100|10.4|4833168|1">100K Coins 10.4 USD</option>
+                                    <option value="200|20.79|4833197|1">200K Coins 20.79 USD</option>
+                                    <option value="300|31.18|4833191|1">300K Coins 31.18 USD</option>
+                                    <option value="400|41.58|4833180|1">400K Coins 41.58 USD</option>
+                                    <option value="500|51.98|4833193|1">500K Coins 51.98 USD</option>
+                                    <option value="600|62.37|4833187|1">600K Coins 62.37 USD</option>
+                                    <option value="700|72.76|4833177|1">700K Coins 72.76 USD</option>
+                                    <option value="800|83.16|4833179|1">800K Coins 83.16 USD</option>
+                                    <option value="900|93.56|4833189|1">900K Coins 93.56 USD</option>
+                                    <option value="1000|103.95|4833188|1">1000K Coins 103.95 USD</option>
+                                    <option value="2000|207.9|4833194|1">2000K Coins 207.9 USD</option>
+                                    <option value="3000|311.85|4833195|1">3000K Coins 311.85 USD</option>
+                                    <option value="4000|415.8|4833170|1">4000K Coins 415.8 USD</option>
+                                    <option value="5000|519.75|4833190|1">5000K Coins 519.75 USD</option>
+                                    <option value="6000|623.7|4833199|1">6000K Coins 623.7 USD</option>
+                                    <option value="7000|727.65|4833183|1">7000K Coins 727.65 USD</option>
+                                    <option value="8000|831.6|4833181|1">8000K Coins 831.6 USD</option>
+                                    <option value="9000|935.55|4833185|1">9000K Coins 935.55 USD</option>
+                                    <option value="10000|1039.5|4833178|1">10000K Coins 1039.5 USD</option>
+                                    <option value="11000|1143.45|4833174|1">11000K Coins 1143.45 USD</option>
+                                    <option value="12000|1247.4|4833196|1">12000K Coins 1247.4 USD</option>
+                                    <option value="13000|1351.35|4833192|1">13000K Coins 1351.35 USD</option>
+                                    <option value="14000|1455.3|4833182|1">14000K Coins 1455.3 USD</option>
+                                    <option value="15000|1559.25|4833172|1">15000K Coins 1559.25 USD</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Price</span>
+                                <div></div>
+                            </li>
+                            <li>
+                                <input type="button" class="buy-now-btn icon-all" value="BUY NOW">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- 联系我们 -->
+                <div class="contact">
+                    <a href="#">
+                        <img src="/static/images/livechat.png" alt="">
+                    </a>
+                    <div class="tel">
+                        <div class="tel-list">
+                            <span class="tel-list_text">USA</span>
+                            + 1-315-889-1198
+                        </div>
+                        <div class="tel-list">
+                            <span class="tel-list_text">UK</span>
+                            + 1-315-889-1198
+                        </div>
+                    </div>
+                </div>
+                <!-- 语言 -->
+                <div class="languages">
+                    <img src="/static/images/other-languaes.png" alt="">
+                </div>
+            </div>
+            <!-- 主体右边-->
         </div>
     </div>
-    <!-- 中间主体部分 -->
-    <!-- 底部 -->
-    <footer>
-        <div class="foot">
-            <div class="foot-center">
-                <div class="foot-center_left">
-                    <dl>
-                        <dt>Main links</dt>
-                        <dd><a href="">Contact Us</a></dd>
-                        <dd><a href="">About Us</a></dd>
-                        <dd><a href="">Cancellations</a></dd>
-                        <dd><a href="">Conditions</a></dd>
-                        <dd><a href="">Site Map</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>Product</dt>
-                        <dd><a href="">FIFA Coins</a></dd>
-                        <dd><a href="">FIFA 19 Coins</a></dd>
-                        <dd><a href="">FIFA 20 Coins</a></dd>
-                        <dd><a href="">FIFA Mobile Coins</a></dd>
-                        <dd><a href="">Sell To Us</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>Other languages</dt>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/nl.png">
-                                </span>
-                                Fifa Coins Kopen
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/italy.png">
-                                </span>Acquistare
-                                Fifa Coins
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/fr.png">
-                                </span>
-                                Acheter Fifa Coins
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/de.png">
-                                </span>Fifa Coins Kaufen
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/Spain.png">
-                                </span>Compra Fifa Coins
-                            </a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Social media</dt>
-                        <dd>
-                            <a href="https://www.facebook.com">
-                                <span class="f-facebook"></span>Join us on Facebook
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="https://twitter.com">
-                                <span class="f-twitter"></span>Follow us on Twitter
-                            </a></dd>
-                        <dd>
-                            <a href="https://www.youtube.com">
-                                <span class="f-youtube"></span>Watch us on Youtube
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="https://www.google.com">
-                                <span class="f-google"></span>Join us on Google+
-                            </a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="foot-center_right">
-                    <img src="./static/images/foot-logo.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>FIFAAH.COM Copyright 2014-2020, Inc. All Rights Reserved</p>
-            <p>Notice : Possible account termination when using illegal leveling or illegally obtained gold</p>
-        </div>
-    </footer>
-    <!-- 底部 -->
-    <!-- 当前页面的js文件 -->
-    <script src="./static/js/index.js"></script>
-    <script src="./static/swiper/js/swiper.min.js"></script>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            autoplay: true, //可选选项，自动滑动
-            loop: true, // 循环模式选项
-            // 如果需要前进后退按钮
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
+</div>
+<!-- 中间主体部分 -->
+{include file="common:footer" /}
 </body>
 
 </html>

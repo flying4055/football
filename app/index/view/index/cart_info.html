@@ -1,624 +1,447 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>购物车</title>
-    <!-- 导入公共主体样式 -->
-    <link rel="stylesheet" href="./static/css/main.css">
-    <!-- 导入当前页面样式 -->
-    <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="stylesheet" href="./static/css/cart_info.css">
-    <!-- 导入字体图标库 -->
-    <link href="./static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- 导入JQuery -->
-    <script src="./static/js/jquery/jquery-3.2.1.min.js"></script>
-</head>
-
-<body>
-    <!-- 顶部 -->
-    <header>
-        <div class="nav">
-            <div class="nav-left">
-                <div class="nav-left_text">The World Top FIFA Coins Online Store</div>
-                <!-- 分享图标 -->
-                <div class="nav-left_share">
-                    <i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i>
+{include file="common:head" /}
+<link rel="stylesheet" href="/static/css/cart_info.css">
+<!-- 中间主体部分 -->
+<div class="content">
+    <div class="content-box">
+        <div class="content-center">
+            <!-- 主体左边-->
+            <div class="content-center_left">
+                {include file="common:logo" /}
+                <!-- 导航菜单 -->
+                <div class="menu">
+                    <a class="menu-home icon-all" href="./index.html">HOME</a>
+                    <div class="menu-list">
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 COINS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA19 Switch Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 PS4 Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 Xbox One Coins</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA19 PC Coins</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 20 COINS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA MOBILE COINS</a>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA pack</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA pack</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">NEWS</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                                <li>
+                                    <a href="#">NEWS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-list_item menu-list_item-select">
+                            <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 tools</a>
+                            <ul class="menu-list_item-select_ul">
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">FIFA 19 tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <!-- 分享图标 -->
-            </div>
-            <!-- 登陆注册忘记密码 -->
-            <div class="nav-right">
-                <a class="nav-right_login" href="../login/login.html" rel="nofollow">
-                    <i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;Login
-                </a>
-                <a class="nav-right_register" href="./register.html" rel="nofollow">Register</a>
-                <a class="nav-right_forgot" href="#" rel="nofollow">Forgot Password ?</a>
-            </div>
-            <!-- 登陆注册忘记密码 -->
-        </div>
-    </header>
-    <!-- 顶部 -->
-    <!-- 中间主体部分 -->
-    <div class="content">
-        <div class="content-box">
-            <div class="content-center">
-                <!-- 主体左边-->
-                <div class="content-center_left">
-                    <!-- 图标 -->
-                    <div class="logo">
-                        <img class="logo-img" src="./static/images/fifa-logo.png" alt="">
-                        <div class="logo-right">
-                            <a class="logo-right_item">
-                                <i class="fa fa-suitcase fa-lg"></i>
-                                Affiliate
-                            </a>
-                            <a class="logo-right_item logo-right_item__shopping">
-                                <i class="fa fa-shopping-cart fa-lg"></i>
-                                <span>(0)</span>
-                            </a>
-                            <a class="logo-right_item">
-                                items in Cart
-                            </a>
-                            <div class="logo-right_item logo-right_item__select-box">
-                                <select class="logo-right_item__select icon-all">
-                                    <option selected="selected" value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="GBP">GBP</option>
-                                    <option value="AUD">AUD</option>
-                                    <option value="CAD">CAD</option>
-                                </select>
+                <!-- 导航标签 -->
+                <div class="nav-target">
+                    <span class="nav-target-item">HOME</span>
+                    <span class="nav-target-item">Fifa 20 Coins</span>
+                    <span class="nav-target-item">Xbox One Fut20 Coins</span>
+                    <span class="nav-target-item">Cartinfo</span>
+                </div>
+                <!-- 购物车订单 -->
+                <div class="pay">
+                    <!-- 购物列表 -->
+                    <div class="shopping-list">
+                        <!-- 列表标题 -->
+                        <div class="shopping-list_item">
+                            <div>product</div>
+                            <div>amount</div>
+                            <div>price</div>
+                            <div>&nbsp;</div>
+                        </div>
+                        <!-- 列表标题 -->
+                        <!-- 单个商品 -->
+                        <div class="shopping-list_item">
+                            <div class="shopping-name">FIFA2010K Coins</div>
+                            <div class="shopping-number">1</div>
+                            <div class="shopping-price"> 1.34 USD</div>
+                            <div>
+                                <i class="delete-icon"></i>
                             </div>
                         </div>
-                    </div>
-                    <!-- 导航菜单 -->
-                    <div class="menu">
-                        <a class="menu-home icon-all" href="./index.html">HOME</a>
-                        <div class="menu-list">
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 COINS</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA19 Switch Coins</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA19 PS4 Coins</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA19 Xbox One Coins</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA19 PC Coins</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA 20 COINS</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA MOBILE COINS</a>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA pack</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA pack</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA pack</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA pack</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">NEWS</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">NEWS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">NEWS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">NEWS</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu-list_item menu-list_item-select">
-                                <a class="menu-list_item__a" href="javascript:void(0);">FIFA 19 tools</a>
-                                <ul class="menu-list_item-select_ul">
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">FIFA 19 tools</a>
-                                    </li>
-                                </ul>
+                        <!-- 单个商品 -->
+                        <div class="shopping-list_item">
+                            <div class="shopping-name">FIFA2010K Coins</div>
+                            <div class="shopping-number">1</div>
+                            <div class="shopping-price"> 1.34 USD</div>
+                            <div>
+                                <i class="delete-icon"></i>
                             </div>
                         </div>
-                    </div>
-                    <!-- 导航标签 -->
-                    <div class="nav-target">
-                        <span class="nav-target-item">HOME</span>
-                        <span class="nav-target-item">Fifa 20 Coins</span>
-                        <span class="nav-target-item">Xbox One Fut20 Coins</span>
-                        <span class="nav-target-item">Cartinfo</span>
-                    </div>
-                    <!-- 购物车订单 -->
-                    <div class="pay">
-                        <!-- 购物列表 -->
-                        <div class="shopping-list">
-                            <!-- 列表标题 -->
-                            <div class="shopping-list_item">
-                                <div>product</div>
-                                <div>amount</div>
-                                <div>price</div>
-                                <div>&nbsp;</div>
-                            </div>
-                            <!-- 列表标题 -->
-                            <!-- 单个商品 -->
-                            <div class="shopping-list_item">
-                                <div class="shopping-name">FIFA2010K Coins</div>
-                                <div class="shopping-number">1</div>
-                                <div class="shopping-price"> 1.34 USD</div>
-                                <div>
-                                    <i class="delete-icon"></i>
-                                </div>
-                            </div>
-                            <!-- 单个商品 -->
-                            <div class="shopping-list_item">
-                                <div class="shopping-name">FIFA2010K Coins</div>
-                                <div class="shopping-number">1</div>
-                                <div class="shopping-price"> 1.34 USD</div>
-                                <div>
-                                    <i class="delete-icon"></i>
-                                </div>
-                            </div>
-                            <div class="shopping-list_payment">
-                                <button>Clear All</button>
-                                <span>
+                        <div class="shopping-list_payment">
+                            <button>Clear All</button>
+                            <span>
                                     Payment Fee :&nbsp;&nbsp;
                                     <em>+ 0.5 USD</em>
                                 </span>
-                            </div>
-                            <div class="shopping-list-total">Total Amount :&nbsp;&nbsp;
-                                <em>3.18 USD</em>
-                            </div>
                         </div>
-                        <!-- 用户信息 -->
-                        <section>
-                            <div class="section-title">Fill your order information</div>
-                            <div class="section-body">
-                                <form action="#">
-                                    <div class="form-item">
-                                        <label for=""><em>*</em> Email:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for=""><em>*</em>Phone:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <select>
-                                                <option value="">--Country--</option>
-                                                <option value="61">Australia +61</option>
-                                                <option value="55">Brazil +55</option>
-                                                <option value="1">Canada +1</option>
-                                                <option value="45">Denmark +45</option>
-                                                <option value="33">France +33</option>
-                                                <option value="49">Germany +49</option>
-                                                <option value="39">Italy +39</option>
-                                                <option value="31">Netherlands +31</option>
-                                                <option value="64">New Zealand +64</option>
-                                                <option value="47">Norway +47</option>
-                                                <option value="351">Portugal +351</option>
-                                                <option value="65">Singapore +65</option>
-                                                <option value="34">Spain +34</option>
-                                                <option value="46">Sweden +46</option>
-                                                <option value="41">Switzerland +41</option>
-                                                <option value="44">United Kingdom +44</option>
-                                                <option value="1">United States +1</option>
-                                                <option value="93">Afghanistan +93</option>
-                                                <option value="355">Albania +355</option>
-                                                <option value="213">Algeria +213</option>
-                                                <option value="33">Andorra +33</option>
-                                                <option value="244">Angola +244</option>
-                                                <option value="809">Anguilla +809</option>
-                                                <option value="809">Antigua and Barbuda +809</option>
-                                                <option value="54">Argentina +54</option>
-                                                <option value="7">Armenia +7</option>
-                                                <option value="297">Aruba +297</option>
-                                                <option value="61">Australia +61</option>
-                                                <option value="43">Austria +43</option>
-                                                <option value="7">Azerbaijan +7</option>
-                                                <option value="809">Bahamas +809</option>
-                                                <option value="973">Bahrain +973</option>
-                                                <option value="880">Bangladesh +880</option>
-                                                <option value="809">Barbados +809</option>
-                                                <option value="7">Belarus +7</option>
-                                                <option value="32">Belgium +32</option>
-                                                <option value="501">Belize +501</option>
-                                                <option value="229">Benin +229</option>
-                                                <option value="809">Bermuda +809</option>
-                                                <option value="975">Bhutan +975</option>
-                                                <option value="591">Bolivia +591</option>
-                                                <option value="387">Bosnia and Herzegovina +387</option>
-                                                <option value="267">Botswana +267</option>
-                                                <option value="55">Brazil +55</option>
-                                                <option value="809">British Virgin Islands +809</option>
-                                                <option value="673">Brunei +673</option>
-                                                <option value="359">Bulgaria +359</option>
-                                                <option value="226">Burkina Faso +226</option>
-                                                <option value="257">Burundi +257</option>
-                                                <option value="855">Cambodia +855</option>
-                                                <option value="237">Cameroon +237</option>
-                                                <option value="1">Canada +1</option>
-                                                <option value="238">Cape Verde +238</option>
-                                                <option value="238">Cayman Islands +238</option>
-                                                <option value="236">Central African Republic +236</option>
-                                                <option value="235">Chad +235</option>
-                                                <option value="56">Chile +56</option>
-                                                <option value="86">China +86</option>
-                                                <option value="57">Colombia +57</option>
-                                                <option value="269">Comoros +269</option>
-                                                <option value="242">Congo +242</option>
-                                                <option value="506">Costa Rica +506</option>
-                                                <option value="225">Cote d'Ivoire +225</option>
-                                                <option value="385">Croatia +385</option>
-                                                <option value="53">Cuba +53</option>
-                                                <option value="357">Cyprus +357</option>
-                                                <option value="420">Czech Republic +420</option>
-                                                <option value="45">Denmark +45</option>
-                                                <option value="253">Djibouti +253</option>
-                                                <option value="809">Dominica +809</option>
-                                                <option value="809">Dominican Republic +809</option>
-                                                <option value="593">Ecuador +593</option>
-                                                <option value="20">Egypt +20</option>
-                                                <option value="503">El Salvador +503</option>
-                                                <option value="240">Equatorial Guinea +240</option>
-                                                <option value="291">Eritrea +291</option>
-                                                <option value="7">Estonia +7</option>
-                                                <option value="251">Ethiopia +251</option>
-                                                <option value="679">Fiji +679</option>
-                                                <option value="358">Finland +358</option>
-                                                <option value="33">France +33</option>
-                                                <option value="594">French Guiana +594</option>
-                                                <option value="689">French Polynesia +689</option>
-                                                <option value="689">French Southern Territories +689</option>
-                                                <option value="220">Gabon +220</option>
-                                                <option value="220">Gambia +220</option>
-                                                <option value="7">Georgia +7</option>
-                                                <option value="49">Germany +49</option>
-                                                <option value="233">Ghana +233</option>
-                                                <option value="30">Greece +30</option>
-                                                <option value="299">Greenland +299</option>
-                                                <option value="590">Guadeloupe +590</option>
-                                                <option value="502">Guatemala +502</option>
-                                                <option value="224">Guinea +224</option>
-                                                <option value="245">Guinea-Bissau +245</option>
-                                                <option value="592">Guyana +592</option>
-                                                <option value="509">Haiti +509</option>
-                                                <option value="504">Honduras +504</option>
-                                                <option value="852">Hong Kong +852</option>
-                                                <option value="36">Hungary +36</option>
-                                                <option value="354">Iceland +354</option>
-                                                <option value="91">India +91</option>
-                                                <option value="62">Indonesia +62</option>
-                                                <option value="98">Iran +98</option>
-                                                <option value="964">Iraq +964</option>
-                                                <option value="353">Ireland +353</option>
-                                                <option value="972">Israel +972</option>
-                                                <option value="39">Italy +39</option>
-                                                <option value="809">Jamaica +809</option>
-                                                <option value="81">Japan +81</option>
-                                                <option value="962">Jordan +962</option>
-                                                <option value="7">Kazakhstan +7</option>
-                                                <option value="254">Kenya +254</option>
-                                                <option value="686">Kiribati +686</option>
-                                                <option value="965">Kuwait +965</option>
-                                                <option value="7">Kyrgyzstan +7</option>
-                                                <option value="856">Laos +856</option>
-                                                <option value="7">Latvia +7</option>
-                                                <option value="961">Lebanon +961</option>
-                                                <option value="266">Lesotho +266</option>
-                                                <option value="231">Liberia +231</option>
-                                                <option value="218">Libya +218</option>
-                                                <option value="41">Liechtenstein +41</option>
-                                                <option value="370">Lithuania +370</option>
-                                                <option value="352">Luxembourg +352</option>
-                                                <option value="389">Macedonia +389</option>
-                                                <option value="261">Madagascar +261</option>
-                                                <option value="60">Malaysia +60</option>
-                                                <option value="223">Mali +223</option>
-                                                <option value="356">Malta +356</option>
-                                                <option value="596">Martinique +596</option>
-                                                <option value="222">Mauritania +222</option>
-                                                <option value="230">Mauritius +230</option>
-                                                <option value="269">Mayotte +269</option>
-                                                <option value="52">Mexico +52</option>
-                                                <option value="691">Micronesia +691</option>
-                                                <option value="7">Moldova +7</option>
-                                                <option value="33">Monaco +33</option>
-                                                <option value="976">Mongolia +976</option>
-                                                <option value="809">Montserrat +809</option>
-                                                <option value="212">Morocco +212</option>
-                                                <option value="258">Mozambique +258</option>
-                                                <option value="95">Myanmar +95</option>
-                                                <option value="264">Namibia +264</option>
-                                                <option value="977">Nepal +977</option>
-                                                <option value="31">Netherlands +31</option>
-                                                <option value="599">Netherlands Antilles +599</option>
-                                                <option value="687">New Caledonia +687</option>
-                                                <option value="64">New Zealand +64</option>
-                                                <option value="505">Nicaragua +505</option>
-                                                <option value="227">Niger +227</option>
-                                                <option value="234">Nigeria +234</option>
-                                                <option value="683">Niue +683</option>
-                                                <option value="850">North Korea +850</option>
-                                                <option value="47">Norway +47</option>
-                                                <option value="968">Oman +968</option>
-                                                <option value="92">Pakistan +92</option>
-                                                <option value="507">Panama +507</option>
-                                                <option value="675">Papua New Guinea +675</option>
-                                                <option value="595">Paraguay +595</option>
-                                                <option value="51">Peru +51</option>
-                                                <option value="63">Philippines +63</option>
-                                                <option value="48">Poland +48</option>
-                                                <option value="351">Portugal +351</option>
-                                                <option value="1">Puerto Rico +1</option>
-                                                <option value="974">Qatar +974</option>
-                                                <option value="40">Romania +40</option>
-                                                <option value="7">Russia +7</option>
-                                                <option value="250">Rwanda +250</option>
-                                                <option value="809">Saint Lucia +809</option>
-                                                <option value="966">Saudi Arabia +966</option>
-                                                <option value="221">Senegal +221</option>
-                                                <option value="381">Serbia +381</option>
-                                                <option value="248">Seychelles +248</option>
-                                                <option value="232">Sierra Leone +232</option>
-                                                <option value="65">Singapore +65</option>
-                                                <option value="421">Slovakia +421</option>
-                                                <option value="386">Slovenia +386</option>
-                                                <option value="252">Somalia +252</option>
-                                                <option value="27">South Africa +27</option>
-                                                <option value="82">South Korea +82</option>
-                                                <option value="34">Spain +34</option>
-                                                <option value="94">Sri Lanka +94</option>
-                                                <option value="249">Sudan +249</option>
-                                                <option value="597">Suriname +597</option>
-                                                <option value="268">Swaziland +268</option>
-                                                <option value="46">Sweden +46</option>
-                                                <option value="41">Switzerland +41</option>
-                                                <option value="886">Taiwan +886</option>
-                                                <option value="7">Tajikistan +7</option>
-                                                <option value="255">Tanzania +255</option>
-                                                <option value="66">Thailand +66</option>
-                                                <option value="228">Togo +228</option>
-                                                <option value="690">Tokelau +690</option>
-                                                <option value="676">Tonga +676</option>
-                                                <option value="809">Trinidad and Tobago +809</option>
-                                                <option value="216">Tunisia +216</option>
-                                                <option value="90">Turkey +90</option>
-                                                <option value="7">Turkmenistan +7</option>
-                                                <option value="1">U.S. Virgin Islands +1</option>
-                                                <option value="256">Uganda +256</option>
-                                                <option value="7">Ukraine +7</option>
-                                                <option value="971">United Arab Emirates +971</option>
-                                                <option value="44">United Kingdom +44</option>
-                                                <option value="1">United States +1</option>
-                                                <option value="598">Uruguay +598</option>
-                                                <option value="7">Uzbekistan +7</option>
-                                                <option value="678">Vanuatu +678</option>
-                                                <option value="39">Vatican +39</option>
-                                                <option value="58">Venezuela +58</option>
-                                                <option value="84">Vietnam +84</option>
-                                                <option value="212">Western Sahara +212</option>
-                                                <option value="967">Yemen +967</option>
-                                                <option value="389">Yugoslavia +389</option>
-                                                <option value="260">Zambia +260</option>
-                                                <option value="263">Zimbabwe +263</option>
-                                            </select>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for="">Coupon:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <input type="text">
-                                            <button>check</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for="">Cash Code:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <input type="text">
-                                            <button>check</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </section>
-                        <!-- 玩家信息 -->
-                        <section>
-                            <div class="section-title">Player Information</div>
-                            <div class="section-body">
-                                <form action="#">
-                                    <div class="form-item">
-                                        <label for=""><em>*</em> Player Name:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for=""><em>*</em> Start Price:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <input type="text" value="348,000">
-                                        </div>
-                                    </div>
-                                    <div class="form-item">
-                                        <label for=""><em>*</em> Buy Now Price:&nbsp;</label>
-                                        <div class="form-item_box">
-                                            <input type="text" value="60,000">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </section>
-                        <!-- 确认购买 -->
-                        <div class="pay-btn">
-                            <button>PAY NOW</button>
-                        </div>
-                        <div class="pay-tips">
-                            <p>
-                                <strong>Notice&nbsp;:</strong>
-                            </p>
-                            <p style="line-height: 20px;">
-                                Never give your goods to anyone once you receive it, because fraudulent activities
-                                are
-                                taking place frequently and increasingly. We will never ask you to give the goods
-                                back
-                                after trading! To protect your order security, please don't give your private
-                                information to anyone in game.
-                            </p>
+                        <div class="shopping-list-total">Total Amount :&nbsp;&nbsp;
+                            <em>3.18 USD</em>
                         </div>
                     </div>
-                    <!-- 购物车订单 -->
+                    <!-- 用户信息 -->
+                    <section>
+                        <div class="section-title">Fill your order information</div>
+                        <div class="section-body">
+                            <form action="#">
+                                <div class="form-item">
+                                    <label for=""><em>*</em> Email:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for=""><em>*</em>Phone:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <select>
+                                            <option value="">--Country--</option>
+                                            <option value="61">Australia +61</option>
+                                            <option value="55">Brazil +55</option>
+                                            <option value="1">Canada +1</option>
+                                            <option value="45">Denmark +45</option>
+                                            <option value="33">France +33</option>
+                                            <option value="49">Germany +49</option>
+                                            <option value="39">Italy +39</option>
+                                            <option value="31">Netherlands +31</option>
+                                            <option value="64">New Zealand +64</option>
+                                            <option value="47">Norway +47</option>
+                                            <option value="351">Portugal +351</option>
+                                            <option value="65">Singapore +65</option>
+                                            <option value="34">Spain +34</option>
+                                            <option value="46">Sweden +46</option>
+                                            <option value="41">Switzerland +41</option>
+                                            <option value="44">United Kingdom +44</option>
+                                            <option value="1">United States +1</option>
+                                            <option value="93">Afghanistan +93</option>
+                                            <option value="355">Albania +355</option>
+                                            <option value="213">Algeria +213</option>
+                                            <option value="33">Andorra +33</option>
+                                            <option value="244">Angola +244</option>
+                                            <option value="809">Anguilla +809</option>
+                                            <option value="809">Antigua and Barbuda +809</option>
+                                            <option value="54">Argentina +54</option>
+                                            <option value="7">Armenia +7</option>
+                                            <option value="297">Aruba +297</option>
+                                            <option value="61">Australia +61</option>
+                                            <option value="43">Austria +43</option>
+                                            <option value="7">Azerbaijan +7</option>
+                                            <option value="809">Bahamas +809</option>
+                                            <option value="973">Bahrain +973</option>
+                                            <option value="880">Bangladesh +880</option>
+                                            <option value="809">Barbados +809</option>
+                                            <option value="7">Belarus +7</option>
+                                            <option value="32">Belgium +32</option>
+                                            <option value="501">Belize +501</option>
+                                            <option value="229">Benin +229</option>
+                                            <option value="809">Bermuda +809</option>
+                                            <option value="975">Bhutan +975</option>
+                                            <option value="591">Bolivia +591</option>
+                                            <option value="387">Bosnia and Herzegovina +387</option>
+                                            <option value="267">Botswana +267</option>
+                                            <option value="55">Brazil +55</option>
+                                            <option value="809">British Virgin Islands +809</option>
+                                            <option value="673">Brunei +673</option>
+                                            <option value="359">Bulgaria +359</option>
+                                            <option value="226">Burkina Faso +226</option>
+                                            <option value="257">Burundi +257</option>
+                                            <option value="855">Cambodia +855</option>
+                                            <option value="237">Cameroon +237</option>
+                                            <option value="1">Canada +1</option>
+                                            <option value="238">Cape Verde +238</option>
+                                            <option value="238">Cayman Islands +238</option>
+                                            <option value="236">Central African Republic +236</option>
+                                            <option value="235">Chad +235</option>
+                                            <option value="56">Chile +56</option>
+                                            <option value="86">China +86</option>
+                                            <option value="57">Colombia +57</option>
+                                            <option value="269">Comoros +269</option>
+                                            <option value="242">Congo +242</option>
+                                            <option value="506">Costa Rica +506</option>
+                                            <option value="225">Cote d'Ivoire +225</option>
+                                            <option value="385">Croatia +385</option>
+                                            <option value="53">Cuba +53</option>
+                                            <option value="357">Cyprus +357</option>
+                                            <option value="420">Czech Republic +420</option>
+                                            <option value="45">Denmark +45</option>
+                                            <option value="253">Djibouti +253</option>
+                                            <option value="809">Dominica +809</option>
+                                            <option value="809">Dominican Republic +809</option>
+                                            <option value="593">Ecuador +593</option>
+                                            <option value="20">Egypt +20</option>
+                                            <option value="503">El Salvador +503</option>
+                                            <option value="240">Equatorial Guinea +240</option>
+                                            <option value="291">Eritrea +291</option>
+                                            <option value="7">Estonia +7</option>
+                                            <option value="251">Ethiopia +251</option>
+                                            <option value="679">Fiji +679</option>
+                                            <option value="358">Finland +358</option>
+                                            <option value="33">France +33</option>
+                                            <option value="594">French Guiana +594</option>
+                                            <option value="689">French Polynesia +689</option>
+                                            <option value="689">French Southern Territories +689</option>
+                                            <option value="220">Gabon +220</option>
+                                            <option value="220">Gambia +220</option>
+                                            <option value="7">Georgia +7</option>
+                                            <option value="49">Germany +49</option>
+                                            <option value="233">Ghana +233</option>
+                                            <option value="30">Greece +30</option>
+                                            <option value="299">Greenland +299</option>
+                                            <option value="590">Guadeloupe +590</option>
+                                            <option value="502">Guatemala +502</option>
+                                            <option value="224">Guinea +224</option>
+                                            <option value="245">Guinea-Bissau +245</option>
+                                            <option value="592">Guyana +592</option>
+                                            <option value="509">Haiti +509</option>
+                                            <option value="504">Honduras +504</option>
+                                            <option value="852">Hong Kong +852</option>
+                                            <option value="36">Hungary +36</option>
+                                            <option value="354">Iceland +354</option>
+                                            <option value="91">India +91</option>
+                                            <option value="62">Indonesia +62</option>
+                                            <option value="98">Iran +98</option>
+                                            <option value="964">Iraq +964</option>
+                                            <option value="353">Ireland +353</option>
+                                            <option value="972">Israel +972</option>
+                                            <option value="39">Italy +39</option>
+                                            <option value="809">Jamaica +809</option>
+                                            <option value="81">Japan +81</option>
+                                            <option value="962">Jordan +962</option>
+                                            <option value="7">Kazakhstan +7</option>
+                                            <option value="254">Kenya +254</option>
+                                            <option value="686">Kiribati +686</option>
+                                            <option value="965">Kuwait +965</option>
+                                            <option value="7">Kyrgyzstan +7</option>
+                                            <option value="856">Laos +856</option>
+                                            <option value="7">Latvia +7</option>
+                                            <option value="961">Lebanon +961</option>
+                                            <option value="266">Lesotho +266</option>
+                                            <option value="231">Liberia +231</option>
+                                            <option value="218">Libya +218</option>
+                                            <option value="41">Liechtenstein +41</option>
+                                            <option value="370">Lithuania +370</option>
+                                            <option value="352">Luxembourg +352</option>
+                                            <option value="389">Macedonia +389</option>
+                                            <option value="261">Madagascar +261</option>
+                                            <option value="60">Malaysia +60</option>
+                                            <option value="223">Mali +223</option>
+                                            <option value="356">Malta +356</option>
+                                            <option value="596">Martinique +596</option>
+                                            <option value="222">Mauritania +222</option>
+                                            <option value="230">Mauritius +230</option>
+                                            <option value="269">Mayotte +269</option>
+                                            <option value="52">Mexico +52</option>
+                                            <option value="691">Micronesia +691</option>
+                                            <option value="7">Moldova +7</option>
+                                            <option value="33">Monaco +33</option>
+                                            <option value="976">Mongolia +976</option>
+                                            <option value="809">Montserrat +809</option>
+                                            <option value="212">Morocco +212</option>
+                                            <option value="258">Mozambique +258</option>
+                                            <option value="95">Myanmar +95</option>
+                                            <option value="264">Namibia +264</option>
+                                            <option value="977">Nepal +977</option>
+                                            <option value="31">Netherlands +31</option>
+                                            <option value="599">Netherlands Antilles +599</option>
+                                            <option value="687">New Caledonia +687</option>
+                                            <option value="64">New Zealand +64</option>
+                                            <option value="505">Nicaragua +505</option>
+                                            <option value="227">Niger +227</option>
+                                            <option value="234">Nigeria +234</option>
+                                            <option value="683">Niue +683</option>
+                                            <option value="850">North Korea +850</option>
+                                            <option value="47">Norway +47</option>
+                                            <option value="968">Oman +968</option>
+                                            <option value="92">Pakistan +92</option>
+                                            <option value="507">Panama +507</option>
+                                            <option value="675">Papua New Guinea +675</option>
+                                            <option value="595">Paraguay +595</option>
+                                            <option value="51">Peru +51</option>
+                                            <option value="63">Philippines +63</option>
+                                            <option value="48">Poland +48</option>
+                                            <option value="351">Portugal +351</option>
+                                            <option value="1">Puerto Rico +1</option>
+                                            <option value="974">Qatar +974</option>
+                                            <option value="40">Romania +40</option>
+                                            <option value="7">Russia +7</option>
+                                            <option value="250">Rwanda +250</option>
+                                            <option value="809">Saint Lucia +809</option>
+                                            <option value="966">Saudi Arabia +966</option>
+                                            <option value="221">Senegal +221</option>
+                                            <option value="381">Serbia +381</option>
+                                            <option value="248">Seychelles +248</option>
+                                            <option value="232">Sierra Leone +232</option>
+                                            <option value="65">Singapore +65</option>
+                                            <option value="421">Slovakia +421</option>
+                                            <option value="386">Slovenia +386</option>
+                                            <option value="252">Somalia +252</option>
+                                            <option value="27">South Africa +27</option>
+                                            <option value="82">South Korea +82</option>
+                                            <option value="34">Spain +34</option>
+                                            <option value="94">Sri Lanka +94</option>
+                                            <option value="249">Sudan +249</option>
+                                            <option value="597">Suriname +597</option>
+                                            <option value="268">Swaziland +268</option>
+                                            <option value="46">Sweden +46</option>
+                                            <option value="41">Switzerland +41</option>
+                                            <option value="886">Taiwan +886</option>
+                                            <option value="7">Tajikistan +7</option>
+                                            <option value="255">Tanzania +255</option>
+                                            <option value="66">Thailand +66</option>
+                                            <option value="228">Togo +228</option>
+                                            <option value="690">Tokelau +690</option>
+                                            <option value="676">Tonga +676</option>
+                                            <option value="809">Trinidad and Tobago +809</option>
+                                            <option value="216">Tunisia +216</option>
+                                            <option value="90">Turkey +90</option>
+                                            <option value="7">Turkmenistan +7</option>
+                                            <option value="1">U.S. Virgin Islands +1</option>
+                                            <option value="256">Uganda +256</option>
+                                            <option value="7">Ukraine +7</option>
+                                            <option value="971">United Arab Emirates +971</option>
+                                            <option value="44">United Kingdom +44</option>
+                                            <option value="1">United States +1</option>
+                                            <option value="598">Uruguay +598</option>
+                                            <option value="7">Uzbekistan +7</option>
+                                            <option value="678">Vanuatu +678</option>
+                                            <option value="39">Vatican +39</option>
+                                            <option value="58">Venezuela +58</option>
+                                            <option value="84">Vietnam +84</option>
+                                            <option value="212">Western Sahara +212</option>
+                                            <option value="967">Yemen +967</option>
+                                            <option value="389">Yugoslavia +389</option>
+                                            <option value="260">Zambia +260</option>
+                                            <option value="263">Zimbabwe +263</option>
+                                        </select>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for="">Coupon:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <input type="text">
+                                        <button>check</button>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for="">Cash Code:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <input type="text">
+                                        <button>check</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- 玩家信息 -->
+                    <section>
+                        <div class="section-title">Player Information</div>
+                        <div class="section-body">
+                            <form action="#">
+                                <div class="form-item">
+                                    <label for=""><em>*</em> Player Name:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for=""><em>*</em> Start Price:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <input type="text" value="348,000">
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for=""><em>*</em> Buy Now Price:&nbsp;</label>
+                                    <div class="form-item_box">
+                                        <input type="text" value="60,000">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- 确认购买 -->
+                    <div class="pay-btn">
+                        <button>PAY NOW</button>
+                    </div>
+                    <div class="pay-tips">
+                        <p>
+                            <strong>Notice&nbsp;:</strong>
+                        </p>
+                        <p style="line-height: 20px;">
+                            Never give your goods to anyone once you receive it, because fraudulent activities
+                            are
+                            taking place frequently and increasingly. We will never ask you to give the goods
+                            back
+                            after trading! To protect your order security, please don't give your private
+                            information to anyone in game.
+                        </p>
+                    </div>
                 </div>
-                <!-- 主体左边-->
+                <!-- 购物车订单 -->
             </div>
+            <!-- 主体左边-->
         </div>
     </div>
-    <!-- 中间主体部分 -->
-    <!-- 底部 -->
-    <footer>
-        <div class="foot">
-            <div class="foot-center">
-                <div class="foot-center_left">
-                    <dl>
-                        <dt>Main links</dt>
-                        <dd><a href="">Contact Us</a></dd>
-                        <dd><a href="">About Us</a></dd>
-                        <dd><a href="">Cancellations</a></dd>
-                        <dd><a href="">Conditions</a></dd>
-                        <dd><a href="">Site Map</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>Product</dt>
-                        <dd><a href="">FIFA Coins</a></dd>
-                        <dd><a href="">FIFA 19 Coins</a></dd>
-                        <dd><a href="">FIFA 20 Coins</a></dd>
-                        <dd><a href="">FIFA Mobile Coins</a></dd>
-                        <dd><a href="">Sell To Us</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>Other languages</dt>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/nl.png">
-                                </span>
-                                Fifa Coins Kopen
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/italy.png">
-                                </span>Acquistare
-                                Fifa Coins
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/fr.png">
-                                </span>
-                                Acheter Fifa Coins
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/de.png">
-                                </span>Fifa Coins Kaufen
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="">
-                                <span>
-                                    <img src="/images/Spain.png">
-                                </span>Compra Fifa Coins
-                            </a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Social media</dt>
-                        <dd>
-                            <a href="https://www.facebook.com">
-                                <span class="f-facebook"></span>Join us on Facebook
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="https://twitter.com">
-                                <span class="f-twitter"></span>Follow us on Twitter
-                            </a></dd>
-                        <dd>
-                            <a href="https://www.youtube.com">
-                                <span class="f-youtube"></span>Watch us on Youtube
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="https://www.google.com">
-                                <span class="f-google"></span>Join us on Google+
-                            </a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="foot-center_right">
-                    <img src="./static/images/foot-logo.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>FIFAAH.COM Copyright 2014-2020, Inc. All Rights Reserved</p>
-            <p>Notice : Possible account termination when using illegal leveling or illegally obtained gold</p>
-        </div>
-    </footer>
-    <!-- 底部 -->
-    <!-- 当前页面的js文件 -->
-    <script src="./static/js/index.js"></script>
-    <script src="./static/swiper/js/swiper.min.js"></script>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            autoplay: true, //可选选项，自动滑动
-            loop: true, // 循环模式选项
-            // 如果需要前进后退按钮
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
+</div>
+<!-- 中间主体部分 -->
+{include file="common:footer" /}
 </body>
 
 </html>

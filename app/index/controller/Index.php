@@ -10,4 +10,14 @@ class Index extends BaseController
     {
         return view('index');
     }
+
+    public function cart_info()
+    {
+        return view('index/cart_info');
+    }
+
+    public function detail()
+    {
+        return view('index/detail');
+    }
 }
