@@ -118,65 +118,71 @@
                 <main class="payment-main">
                     <nav class="payment-process">
                         <ul>
-                            <li class="yes"><em>1</em><span>Delivery Information & Check Out</span></li>
-                            <li><em>2</em><span>Payment</span></li>
+                            <li><em>1</em><span>Delivery Information & Check Out</span></li>
+                            <li class="yes"><em>2</em><span>Payment</span></li>
                             <li><em>3</em><span>Seller Delivery</span></li>
                         </ul>
                     </nav>
-                    <section class="delivery">
-                        <blockquote>
-                            <p>PS4 Safe Trade FIFA 20 Coins</p>
-                            <p>Seller: iGV flagship store (87.88% Positive)</p>
-                            <p>Delivery Speed: 15 Minutes</p>
-                        </blockquote>
-                        <div class="delivery-title">
-                            Quantity & Delivery Method
-                        </div>
-                        <div class="delivery-select">
-                            <p class="delivery-select-value">100k</p>
-                            <ul class="delivery-select-options">
-                                <li value="1">100k</li>
-                                <li value="2">200k</li>
-                                <li value="3">300k</li>
-                                <li value="4">400k</li>
-                                <li value="5">500k</li>
+                    <!-- 支付 -->
+                    <div class="payment-content">
+                        <div class="coupon-box">
+                            <div class="coupon-select">
+                                <span>Coupon</span>
+                                <span class="coupon-select_chevron"><i class="fa fa-chevron-down"></i></span>
+                            </div>
+                            <ul class="coupon-options" style="display: none;">
+                                <!--没有优惠券时显示-->
+                                <li style="display:none">暂无优惠</li>
+                                <!---->
+                                <li>
+                                    <span>优惠1</span>
+                                    <input type="radio" name="coupon-radio" value="优惠1"/>
+                                </li>
+                                <li>
+                                    <span>优惠1</span>
+                                    <input type="radio" name="coupon-radio" value="优惠1"/>
+                                </li>
+                                <li>
+                                    <span>优惠1</span>
+                                    <input type="radio" name="coupon-radio" value="优惠1"/>
+                                </li>
                             </ul>
-                            <i class="fa fa-chevron-down"></i>
                         </div>
-                        <div class="delivery-select">
-                            <p class="delivery-select-value">100k</p>
-                            <ul class="delivery-select-options">
-                                <li value="1">FIFA 20 Coins</li>
-                                <li value="2">FIFA 19 Coins</li>
-                                <li value="3">FIFA 18 Coins</li>
-                                <li value="4">FIFA 17 Coins</li>
-                                <li value="5">FIFA 16 Coins</li>
+                        <div class="payment-method">
+                            <div class="payment-method_title">Payment Method</div>
+                            <ul class="payment-method_list">
+                                <li>
+                                    <span>支付宝</span>
+                                    <span>
+                                    <em>2.5%</em>
+                                    <span class="pay-tag">fee</span>
+                                    <input type="radio" name="radio" class="l-radio"/>
+                                </span>
+                                </li>
+                                <li>
+                                    <span>微信支付</span>
+                                    <span>
+                                    <em>2.5%</em>
+                                    <span class="pay-tag">fee</span>
+                                    <input type="radio" name="radio" class="l-radio"/>
+                                </span>
+                                </li>
                             </ul>
-                            <i class="fa fa-chevron-down"></i>
+                            <div class="payment-price">Price <span>9.23 <em>USD</em></span></div>
+                            <div class="payment-price">Coupon<span>-0.00 <em>USD</em></span></div>
+                            <div class="payment-price">Transaction Free<span>+0.00 <em>USD</em></span></div>
+                            <div class="payment-price">Payment Fee (0%)<span>+0.00 <em>USD</em></span></div>
+                            <div class="payment-contract">
+                                <input type="checkbox" name="contract" id="contract">
+                                <label for="contract">I have read and accepted Terms & Conditions.</label>
+                            </div>
+                            <div class="payment-btn">
+                                Confirm the Payment <span>9.23</span>USD
+                            </div>
                         </div>
-                        <article class="delivery-notice">
-                            <p>After you completed payment We will send you one email and message which include one Delivery Link.</p>
-                            <p>After you clicked the email Link, check the following steps for Safe Trade:</p>
-                            <p>①(IMPORTANT) Please fill your Account information in email Link Attention:
-                                Please log out your fut on you console end webapp.
-                            <p>②Fill in the Code that EA sent to your phone / email twice, or fill backup codes.</p>
-                            <p>③ When all information is correct. Delivery link page will shows processing / or
-                                loading bar (IMPORTANT) During Transfering,please do not login in your FUT on console or webapp.
-                                And Delivery link paqe can be closed. After we complete delivery,we will send you one Email and let you know.</p>
-                            <p>To ensure the security of your account, please amend your account information immediately after the order
-                                is completed.Thanks</p>
-                        </article>
-                        <div class="delivery-input">
-                            <input type="email" placeholder="Contact Email">
-                        </div>
-                        <div class="delivery-input">
-                            <input type="email" placeholder="Enter Your Coupon Code">
-                            <input type="button" value="use">
-                        </div>
-
-                    </section>
+                    </div>
+                    <!-- 支付 -->
                 </main>
-
             </div>
             <!-- 主体左边-->
         </div>
@@ -189,29 +195,5 @@
     $(".coupon-select_chevron").click(function (event) {
         $(".coupon-options").toggle();
     });
-
-    $(".delivery-select i").click(function (event) {
-        $(this).siblings(".delivery-select-options").toggle();
-    });
-
-    let select_value = $(".delivery-select-value");
-
-    select_value.click(function () {
-        if ($(this).siblings(".delivery-select-options").css("display") === "none") {
-            $(".delivery-select-options").hide();
-            $(this).siblings(".delivery-select-options").show();
-        } else {
-            $(this).siblings(".delivery-select-options").hide();
-        }
-    });
-
-    $(".delivery-select-options li").click(function () {
-        select_value.text($(this).text());
-    });
-
-    $(".delivery-select-options").mouseover(function(){
-        console.log(this);
-    });
-
 </script>
 </html>
