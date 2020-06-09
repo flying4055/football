@@ -15,7 +15,7 @@ class Payment extends BaseController
 {
     public function index()
     {
-        return view("index");
+        return view("payment/index");
     }
 
     public function payments()
