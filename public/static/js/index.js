@@ -15,5 +15,6 @@ $(document).ready(function () {
     if (user !== 'null' && user !== null) {
         $(".nav-right_login span").html(user.username).css('text-transform', 'capitalize');
         $(".nav-right_login").attr("href", "javascript:;");
+        $(".nav-right_register").attr("href", "/index/logout").text("Logout");
     }
 });

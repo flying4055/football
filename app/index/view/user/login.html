@@ -261,8 +261,8 @@
         let formData = new FormData(form);
         let params = {email: formData.get("email"), password: formData.get("password")};
         $.post("/index/user/login_check", params, function (res) {
-            localStorage.setItem("user", JSON.stringify(res.data));
-            alert(res.msg);
+            // localStorage.setItem("user", JSON.stringify(res.data));
+            // alert(res.msg);
             if (parseInt(res.code) === 0) {
                 window.location.href = "/index";
             }

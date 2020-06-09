@@ -8,6 +8,8 @@ Route::rule('order', 'order/index');
 Route::rule('payments', 'payment/payments');
 // 默认进入填写发货信息页面
 Route::rule('payment', 'payment/index');
+// 退出登陆
+Route::rule('logout', 'user/logout');
 // 登陆页面
 Route::rule('login', 'user/login');
 // 注册页面

@@ -5,6 +5,7 @@ namespace app\index\controller;
 use app\BaseController;
 use app\index\model\User as userModel;
 use think\facade\Session;
+use think\response\Redirect;
 
 class User extends BaseController
 {
@@ -47,6 +48,7 @@ class User extends BaseController
             if (md5($params['password']) == $result['password']) {
                 unset($result['password']); // 密码不可以展示
                 $userModel->where(['uid' => $result['uid']])->data(['login_time' => time()])->save();
+                session('user_info', $result);
                 return json(['code' => '0', 'msg' => '恭喜您登陆成功', 'data' => $result]);
             } else {
                 return json(['code' => '4000', "msg" => "密码有误"]);
@@ -102,5 +104,11 @@ class User extends BaseController
     {
         $params = $this->request->post();
         return json(['code' => '4000', "msg" => "输入有误,或该账户不存在!"]);
+    }
+
+    public function logout()
+    {
+        session("user_info", null);
+        return redirect('/');
     }
 }

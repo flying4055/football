@@ -41,11 +41,18 @@
         </div>
         <!-- 登陆注册忘记密码 -->
         <div class="nav-right">
+            {if $user_info !== null }
+            <a class="nav-right_login" href="javascript:;">
+                <i class="icon05"></i>&nbsp;&nbsp;<span>{$user_info['username']}</span>
+            </a>
+            <a class="nav-right_register" href="/index/logout">logout</a>
+            {else /}
             <a class="nav-right_login" href="/index/login">
                 <i class="icon05"></i>&nbsp;&nbsp;<span>Login</span>
             </a>
             <a class="nav-right_register" href="/index/register">Register</a>
             <a class="nav-right_forgot" href="/index/forgot_password">Forgot Password ?</a>
+            {/if}
         </div>
         <!-- 登陆注册忘记密码 -->
     </div>

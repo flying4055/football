@@ -51,14 +51,15 @@ header {
     text-align: center;
     flex-grow: 1;
     cursor: pointer;
+    text-transform: capitalize;
+    align-self: stretch;
 }
 
-.nav .nav-right a:hover {
-    color: #f4d974;
-}
-
-.nav .nav-right a i {
-    color: #b3b3b3;
+.nav .nav-right a span {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav .nav-right a:not(:last-child) {
