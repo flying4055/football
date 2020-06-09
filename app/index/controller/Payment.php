@@ -11,7 +11,7 @@ namespace app\index\controller;
 
 use app\BaseController;
 
-class payment extends BaseController
+class Payment extends BaseController
 {
     public function index()
     {
