@@ -39,7 +39,7 @@ header {
 .nav .nav-right {
     width: 260px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -49,10 +49,14 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-grow: 1;
     cursor: pointer;
     text-transform: capitalize;
     align-self: stretch;
+    padding: 0 15px;
+}
+
+.nav .nav-right a:hover {
+    color: #fec601;
 }
 
 .nav .nav-right a span {
@@ -64,6 +68,10 @@ header {
 
 .nav .nav-right a:not(:last-child) {
     border-right: 1px solid #f2f2f2;
+}
+
+.nav .nav-right a:last-child {
+    flex: none;
 }
 
 .content {
@@ -116,13 +124,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: stretch;
     min-width: 75px;
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
 }
 
-em.affilia {
+.logo-right_item i.affiliate {
     width: 100%;
     background-position: -899px -425px;
     height: 17px;
@@ -132,6 +141,7 @@ em.affilia {
 }
 
 .logo-right_item__shopping span {
+    padding-left: 10px;
     font-size: 13px;
     color: #fec601;
 }
@@ -469,13 +479,28 @@ em.affilia {
 
 .quick-sec ol > li {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     padding: 7px 0;
     font-size: 12px;
 }
 
+.quick-sec ol > li > span {
+    width: 66px;
+}
+
+.quick-sec ol > li div.price {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.quick-sec ol > li div.price em {
+    font-size: 10pt;
+    color: #fec601;
+}
+
 .quick-sec ol > li > select {
-    width: 164px;
+    max-width: 164px;
+    flex-grow: 1;
     border: none;
 }
 
@@ -671,14 +696,6 @@ em.affilia {
     overflow: hidden;
     color: #b2b2b2;
     font-size: 11px;
-}
-
-.people {
-    padding: 20px;
-    border: 5px solid #17386a;
-    border-radius: 3px;
-    background: #000b1c;
-    height: 1500px;
 }
 
 .about {

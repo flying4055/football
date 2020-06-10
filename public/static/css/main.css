@@ -40,8 +40,21 @@ img {
     vertical-align: middle;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type='submit'], input[type='button'], button:active {
+    box-shadow: 0 2px 5px 2px #848484;
+}
+
 .icon-all {
-    background: var(--icon);
+    background: url("../images/all-icon.png") 0 0 no-repeat;
 }
 
 .sever-icon_ps4 {
@@ -127,7 +140,6 @@ img {
 }
 
 .yellow-btn-icon {
-    background: var(--icon);
     width: 80px;
     height: 20px !important;
     background-position: -419px -415px;
@@ -137,7 +149,6 @@ img {
 }
 
 .blue-btn-icon {
-    background: var(--icon);
     width: 80px;
     height: 20px !important;
     background-position: -419px -377px;
@@ -174,10 +185,10 @@ img {
 }
 
 .icon01, .icon02, .icon03, .icon04, .icon05 {
-    display: inline-flex;
+    display: inline-block;
     width: 17px;
     height: 17px;
-    background: var(--icon);
+    background: url("../images/all-icon.png") 0 0 no-repeat;
 }
 
 .icon01 {
@@ -202,4 +213,81 @@ img {
 
 .conven-pay span, .conven-price span, .creicon, .currency select, .default, .depicon, .f-google, .f-facebook, .f-twitter, .f-youtube, .fast-deli span, .french, .game-choice .on, .german, .good-repu span, .holland, .italy, .linfff, .login-but, .news-choice .on, .payment, .qbuynow, .qtitle, .quickorder, .search, .search-info, .sever-all li, .sever-mob, .sever-pc, .sever-ps4, .sever-swi, .sever-xb1, .shoppingcar, .affilia, .spain {
     background: var(--icon);
+}
+
+.busi-desc {
+    padding: 20px;
+    border: 5px solid #17386a;
+    border-radius: 3px;
+    background: #000b1c;
+}
+
+.artdesc-title {
+    color: #e8bc2c;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.busi-desc p {
+    padding-top: 16px;
+    line-height: 26px;
+}
+
+.busi-desc p b {
+    color: #fba786;
+    font-size: 14px;
+}
+
+.busi-desc p span {
+    color: #96d0fc;
+    font-weight: 700;
+}
+
+.busi-desc ul {
+    padding: 10px 0 0 30px;
+    list-style-type: circle;
+    line-height: 25px;
+}
+
+.busi-desc ul li {
+    display: list-item;
+    list-style-type: disc;
+}
+
+.busi-intro {
+    position: relative;
+    padding-right: 300px;
+}
+
+.busi-prices {
+    position: relative;
+    padding-right: 300px;
+}
+
+.busi-service {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 300px;
+}
+
+.busi-service img {
+    position: absolute;
+    top: 0;
+    left: 24px;
+}
+
+.busi-intro img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.busi-prices img {
+    position: absolute;
+    top: 30px;
+    right: 90px;
+}
+
+.busi-desc strong {
+    color: #d2bc2c;
 }
