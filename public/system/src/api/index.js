@@ -1,4 +1,5 @@
 import request from '../utils/request';
+import Qs from 'qs';
 
 export const fetchData = query => {
     return request({
@@ -7,3 +8,11 @@ export const fetchData = query => {
         params: query
     });
 };
+
+export const uploadImage = query => {
+    return request({
+        url: "/upload_image",
+        method: 'post',
+        data: Qs.stringify(data)
+    })
+}

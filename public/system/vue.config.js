@@ -8,7 +8,7 @@ module.exports = {
                 target: 'http://yang.fifa.test/api/',
                 changeOrigin: true,
                 pathRewrite: {
-                    '/api': ''
+                    '/api': 'http://yang.fifa.test/api/'
                 }
             }
         }

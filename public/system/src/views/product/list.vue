@@ -57,26 +57,72 @@
         </div>
 
         <!-- 编辑弹出框 -->
-        <!-- <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
+        <el-dialog title="编辑" :visible.sync="editVisible" width="50%">
             <el-form ref="form" :model="form" label-width="70px">
-                <el-form-item label="用户名">
-                    <el-input v-model="form.username"></el-input>
+                <el-form-item label="id" style="display: none;">
+                    <el-input v-model="form.id"></el-input>
+                </el-form-item>
+                <el-form-item label="标题">
+                    <el-input v-model="form.title"></el-input>
+                </el-form-item>
+                <el-form-item label="简介">
+                    <el-input type="textarea" v-model="form.desc"></el-input>
+                </el-form-item>
+                <el-form-item label="关键字">
+                    <el-input v-model="form.keyword"></el-input>
+                </el-form-item>
+                <el-form-item label="币种">
+                    <el-input v-model="form.currency"></el-input>
+                </el-form-item>
+                <el-form-item label="单价">
+                    <el-input v-model="form.price"></el-input>
+                </el-form-item>
+                <el-form-item label="金币包">
+                    <el-input v-model="form.amount_bag"></el-input>
+                </el-form-item>
+                <el-form-item label="扩展包">
+                    <el-input v-model="form.ext_json"></el-input>
+                </el-form-item>
+                <el-form-item label="分类">
+                    <el-select v-model="form.category_id" placeholder="请选择分类">
+                        <el-option label="分类一" value="1"></el-option>
+                        <el-option label="分类二" value="2"></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="图片">
+                    <el-input v-model="form.image"></el-input>
+                    <el-upload
+                        class="avatar-uploader"
+                        action=""
+                        list-type="picture-card"
+                        :file-list="img_list"
+                        :http-request="requestUpload()"
+                        :on-change="changeUpload()"
+                    >
+                        <img v-if="form.image" :src="form.image" class="avatar-img" />
+                        <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                    </el-upload>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="editVisible = false">取 消</el-button>
                 <el-button type="primary" @click="saveEdit">确 定</el-button>
             </span>
-        </el-dialog> -->
+        </el-dialog>
     </div>
 </template>
 
 <script>
+import { uploadImage } from '../../api/index';
 import { fetchData } from '../../api/product';
 export default {
     name: 'basetable',
     data() {
         return {
+            host_url: process.env.NODE_ENV === 'development' ? 'http://yang.fifa.test/api/upload_image' : '/api/upload_image',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
             query: {
                 search: '',
                 pageIndex: 1,
@@ -87,15 +133,36 @@ export default {
             delList: [],
             editVisible: false,
             pageTotal: 0,
-            form: {},
+            form: {
+                id: 0,
+                title: '',
+                desc: '',
+                keyword: '',
+                currency: '',
+                price: '',
+                amount_bag: '',
+                ext_json: '',
+                category_id: '',
+                image: ''
+            },
             idx: -1,
-            id: -1
+            id: -1,
+            img_list: []
         };
     },
     created() {
         this.getData();
     },
     methods: {
+        // 图片上传成功后处理方法
+        changeUpload(file, fileList) {
+            console.log(file);
+            console.log(fileList);
+        },
+        // 图片上传成功后处理方法
+        requestUpload(params) {
+            console.log(params);
+        },
         // 获取列表数据
         getData() {
             fetchData(this.query).then(res => {
@@ -107,8 +174,9 @@ export default {
             });
         },
         // 触发添加按钮
-        handleAdd(){
-            console.log("点击添加");
+        handleAdd() {
+            this.editVisible = true;
+            // console.log('点击添加');
         },
         // 触发搜索按钮
         handleSearch() {

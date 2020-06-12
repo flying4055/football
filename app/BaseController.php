@@ -47,7 +47,9 @@ abstract class BaseController
     {
         $this->app = $app;
         $this->request = $this->app->request;
-        header("Access-Control-Allow-Origin: * ");
+        header('Access-Control-Allow-Origin:*');
+        header('Access-Control-Allow-Headers:x-requested-with,Authorization, content-type');
+        header('Access-Control-Max-Age:86400');
         // 控制器初始化
         $this->initialize();
     }

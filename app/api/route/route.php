@@ -2,4 +2,4 @@
 
 use think\facade\Route;
 
-//Route::rule('user/auth/login');
+Route::rule('upload_image', 'common/upload_image');
